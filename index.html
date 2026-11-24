@@ -2,8 +2,59 @@
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#a71924"><title>Türkisch lernen – Vokabeltrainer</title>
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#20242a;background:#f4f4f2;font-synthesis:none}*{box-sizing:border-box}body{margin:0}header{background:linear-gradient(120deg,#991b25,#c62832);color:#fff;padding:24px max(20px,calc((100% - 1120px)/2));box-shadow:0 5px 18px #48101724}header .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.82}header h1{font-size:clamp(27px,5vw,42px);margin:5px 0}header p{margin:0;opacity:.9}main{max-width:1120px;margin:24px auto;padding:0 18px 45px}.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.nav button,.btn{border:1px solid #e2dfe0;background:#fff;color:#25262a;border-radius:10px;padding:11px 15px;font:inherit;font-weight:650;cursor:pointer}.nav button.active,.btn.primary{background:#a71924;color:#fff;border-color:#a71924}.btn.secondary{background:#fff}.nav .spacer{flex:1}.panel,.stat{background:#fff;border:1px solid #e8e4e4;border-radius:16px;box-shadow:0 4px 16px #30202008}.panel{padding:22px;margin:15px 0}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat{padding:17px}.stat .k{font-size:12px;color:#767176;text-transform:uppercase;letter-spacing:.06em}.stat strong{display:block;font-size:29px;margin-top:5px}.muted{color:#77777d}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row .grow{flex:1}.word{font-size:clamp(34px,6vw,54px);font-weight:780;text-align:center;margin:36px 0 22px}.answer{font-size:25px;font-weight:700;color:#a71924;text-align:center;min-height:38px}.actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:15px 0}.hide{display:none!important}input,select,textarea{font:inherit;padding:11px 12px;border:1px solid #ddd7d8;border-radius:10px;background:#fff;color:#222;width:100%}label{display:block;font-weight:650;font-size:14px;margin:10px 0 6px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.badge{display:inline-block;padding:5px 10px;background:#f9e8e9;color:#9d1722;border-radius:20px;font-size:12px;font-weight:700}.tablewrap{overflow:auto;max-height:560px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:11px 10px;border-bottom:1px solid #eee;font-size:14px}th{color:#777;font-size:12px;text-transform:uppercase;letter-spacing:.05em;position:sticky;top:0;background:#fff}.barrow{display:grid;grid-template-columns:100px 1fr 38px;gap:10px;align-items:center;margin:10px 0;font-size:13px}.bar{height:11px;background:#f1eded;border-radius:20px;overflow:hidden}.bar i{display:block;height:100%;background:#b51f2a;border-radius:20px}.week{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;align-items:end;height:150px;margin-top:18px}.daybar{background:#f7e9ea;border-radius:8px 8px 3px 3px;position:relative;min-height:5px}.daybar i{display:block;position:absolute;bottom:0;width:100%;background:#b51f2a;border-radius:8px 8px 3px 3px}.daylabel{text-align:center;font-size:11px;color:#777;margin-top:7px}.notice{padding:12px 14px;border-radius:10px;background:#fff5e5;color:#704b10;font-size:14px}.success{background:#edf8f0;color:#23643a}.danger{color:#9d1722}.foot{font-size:12px;text-align:center;margin:24px 0;color:#888}.small{font-size:13px}@media(max-width:720px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.formgrid{grid-template-columns:1fr}.panel{padding:16px}.nav button{padding:9px 11px}.barrow{grid-template-columns:80px 1fr 30px}}
+
+:root{font-family:Georgia,"Times New Roman",serif;color:#49231c;background:#f8e8d7;font-synthesis:none}
+body{background:radial-gradient(ellipse at 50% 0%,#fff7e9 0,#f7e2ce 55%,#eed0b8 100%);min-height:100vh}
+header{position:relative;isolation:isolate;overflow:hidden;min-height:270px;padding:30px max(20px,calc((100% - 1400px)/2));background:linear-gradient(110deg,#8f1019 0%,#bd1723 52%,#85101a 100%);border-bottom:7px solid #e7b58d;box-shadow:0 8px 24px #54101840}
+header:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.2;background:repeating-linear-gradient(135deg,transparent 0 22px,#fff 23px 24px,transparent 25px 48px)}
+header:after{content:"";position:absolute;z-index:-1;right:5%;top:-95px;width:420px;height:420px;border:2px solid #f6d7b5;border-radius:50%;opacity:.14;box-shadow:0 0 0 22px #fff1,0 0 0 44px #fff1}
+.hero{max-width:1400px;margin:auto;display:grid;grid-template-columns:230px 1fr 180px;align-items:center;gap:26px;position:relative}
+.hero-copy{text-align:center}.hero .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#f7d9bd}
+header h1{font-family:Georgia,serif;font-size:clamp(34px,5.2vw,64px);line-height:.98;letter-spacing:-.035em;margin:12px 0;color:#fff4e7;text-shadow:0 3px 0 #6e0c14}
+header p{color:#ffe3cb;font-style:italic;font-size:18px}
+.ataturk-bust{width:220px;height:220px;filter:drop-shadow(0 10px 9px #3b080b88)}
+.flag-mark{font-size:92px;line-height:1;text-align:center;color:#fff2df;text-shadow:0 4px 12px #580b12}
+.hero-sign{font-family:cursive;font-size:24px;color:#f7d5b6;margin-top:14px}
+main{max-width:1400px;margin:22px auto;padding:0 20px 55px}
+.nav{background:#f9e8d6;border:1px solid #d9a27e;border-radius:18px;padding:9px;box-shadow:0 5px 16px #6c211b18}
+.nav button,.btn{border:1px solid #dfb99e;background:#fff8ef;color:#81202a;border-radius:12px;padding:11px 15px;font:inherit;font-weight:700;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.nav button:hover,.btn:hover{transform:translateY(-1px);box-shadow:0 4px 10px #6c211b20}
+.nav button.active,.btn.primary{background:#a81420;color:#fff7ed;border-color:#a81420}
+.btn.secondary{background:#fff8ef}
+.panel,.stat{background:linear-gradient(145deg,#fff9ef,#f9e8d7);border:1px solid #dfb99e;border-radius:18px;box-shadow:0 5px 18px #702b2010}
+.panel{padding:24px;margin:16px 0;position:relative}
+.panel:before{content:"✿";position:absolute;right:17px;top:8px;color:#c98d6b;opacity:.35;font-size:24px}
+.stats{gap:14px}.stat{padding:18px 20px;border-bottom:4px solid #b51c27}.stat .k{color:#985c48;font-weight:700;letter-spacing:.1em}.stat strong{color:#a81420;font-family:Georgia,serif;font-size:34px}
+.word{color:#a81420;font-family:Georgia,serif;font-size:clamp(40px,6vw,64px);text-shadow:0 2px #e9c4a4}
+.answer{color:#7d271f;font-family:Georgia,serif;font-size:28px}
+.badge{background:#f1d2bc;color:#8c1721;border:1px solid #e3b69a}
+input,select,textarea{border:1px solid #d9b59b;border-radius:11px;background:#fffaf3}
+label{color:#702a24}
+th{background:#f6e4d3;color:#8b4133}td{border-bottom-color:#efd9c6}
+.bar{background:#f0d8c5}.bar i{background:linear-gradient(90deg,#8e101b,#d53b32)}
+.daybar{background:#f1d8c5}.daybar i{background:linear-gradient(0deg,#9c1420,#d74737)}
+.notice{background:#fff0d7;color:#774b16;border:1px solid #e9c18f}
+.success{background:#e7f3df;color:#28603b}.danger{color:#a81420}
+.foot{color:#9c6651}
+h2{color:#8e1721;font-family:Georgia,serif}
+@media(max-width:760px){header{min-height:0;padding:24px 16px}.hero{grid-template-columns:100px 1fr;gap:10px}.ataturk-bust{width:100px;height:120px}.flag-mark{display:none}.hero-copy{text-align:left}.hero-sign{font-size:17px}header h1{font-size:clamp(30px,8vw,44px)}header p{font-size:15px}.nav{gap:6px}.nav button{font-size:13px;padding:9px 10px}}
+
 </style></head><body>
-<header><div class="eyebrow">Türkçe · Deutsch · Persönlicher Lernbereich</div><h1>🇹🇷 Türkisch lernen</h1><p>Dein Vokabeltrainer – Schritt für Schritt sicherer werden.</p></header>
+<header><div class="hero">
+<svg class="ataturk-bust" viewBox="0 0 240 240" role="img" aria-label="Stilisierte Büste von Mustafa Kemal Atatürk">
+<defs><linearGradient id="marble" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff0d9"/><stop offset=".55" stop-color="#d9b99a"/><stop offset="1" stop-color="#9c6b55"/></linearGradient></defs>
+<path fill="url(#marble)" stroke="#f9dfc4" stroke-width="2" d="M28 226Q37 193 73 184L91 176 91 153Q70 139 66 112L59 106 62 91Q56 59 80 39Q101 19 132 26Q166 25 178 55Q187 76 177 106L171 111Q168 143 146 155L147 176 169 185Q204 195 215 226Z"/>
+<path fill="#633b32" d="M62 91Q48 49 82 28Q112 6 148 23Q185 40 180 88L168 67Q151 76 129 64Q104 77 77 65Z"/>
+<path fill="#6f4539" d="M93 102Q104 97 115 102M139 102Q151 97 161 102" fill="none" stroke="#6f4539" stroke-width="4" stroke-linecap="round"/>
+<path d="M125 104L119 129Q126 135 135 130" fill="none" stroke="#8a5c49" stroke-width="3" stroke-linecap="round"/>
+<path d="M110 145Q128 153 145 143" fill="none" stroke="#704238" stroke-width="3" stroke-linecap="round"/>
+<path fill="#f4dfc8" d="M91 177L120 195 148 177 170 187 189 226H49L69 188Z"/>
+<path fill="#7e2028" d="M110 193L120 226H138L132 193 122 202Z"/>
+<path fill="#fff0dc" d="M91 178L119 197 105 212 83 185ZM148 178L121 197 137 212 161 185Z"/>
+</svg>
+<div class="hero-copy"><div class="eyebrow">Türkçe · Deutsch · Persönlicher Lernbereich</div><h1>Türkisch<br>Vokabeltrainer</h1><p>Ne mutlu Türküm diyene!</p><div class="hero-sign">Mustafa Kemal Atatürk</div></div>
+<div class="flag-mark" aria-hidden="true">☾<br><span style="font-size:48px">★</span></div>
+</div></header>
 <main>
 <nav class="nav"><button data-tab="home" class="active">Übersicht</button><button data-tab="learn">Lernen</button><button data-tab="words">Wortliste</button><button data-tab="add">+ Wort hinzufügen</button><button data-tab="stats">Statistiken</button><span class="spacer"></span><button id="export">Sicherung exportieren</button><button id="import">Importieren</button><input id="file" type="file" accept="application/json" hidden></nav>
 <section id="home">
