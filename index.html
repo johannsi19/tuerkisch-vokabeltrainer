@@ -43,19 +43,33 @@ h2{color:#8e1721;font-family:Georgia,serif}
 .btn.known{background:#236b4a;color:#fff7e9;border:1px solid #c99a55;box-shadow:inset 0 0 0 1px #ffffff22}
 .btn.known:hover{background:#1b573b}
 #endSession{border-color:#b76b55;color:#8f1019;background:#fff3e5}
+
+/* Premium-Upgrade: echtes historisches Atatürk-Porträt und feinere Oberflächen */
+.ataturk-photo{width:220px;height:238px;object-fit:cover;object-position:center 24%;border:5px solid #f4d7b5;border-radius:46% 46% 18px 18px;box-shadow:0 12px 28px #35070c88,0 0 0 7px #ffffff18;filter:sepia(.12) contrast(1.06)}
+.hero{grid-template-columns:240px 1fr 180px}
+header{min-height:300px;background:radial-gradient(ellipse at 18% 40%,#d13b37 0,#b51c27 38%,#760d17 100%)}
+header:before{opacity:.13;background:repeating-linear-gradient(45deg,transparent 0 18px,#f9dfc4 19px 20px,transparent 21px 40px)}
+header h1{letter-spacing:.015em;text-shadow:0 4px 0 #6e0c14,0 8px 22px #41070d66}
+.hero-copy{padding:12px 20px}
+.hero-sign{font-size:26px;text-shadow:0 2px 10px #5b0910}
+.flag-mark{filter:drop-shadow(0 5px 10px #45070b55)}
+main{max-width:1280px}
+.nav{position:sticky;top:10px;z-index:5;backdrop-filter:blur(12px);background:#f9e8d6ed;box-shadow:0 10px 28px #6c211b20}
+.panel,.stat{box-shadow:0 10px 28px #702b2017, inset 0 1px #fff}
+.panel{padding:27px}
+.stat{transition:transform .18s,box-shadow .18s}
+.stat:hover{transform:translateY(-3px);box-shadow:0 14px 30px #702b2025}
+.btn{box-shadow:0 2px 0 #d9b59b}
+.btn.primary{box-shadow:0 4px 0 #710d16,0 8px 16px #8e172133}
+.btn.known{box-shadow:0 4px 0 #164a34,0 8px 16px #164a3422}
+.word{padding:18px 12px;margin:30px 0 18px}
+#learn .panel{background:linear-gradient(145deg,#fffaf1 0%,#f8e6d4 100%);border:1px solid #d6a27e}
+#prompt{letter-spacing:.01em}
+input:focus,select:focus,textarea:focus{outline:3px solid #c64b4540;border-color:#ad202a}
+@media(max-width:760px){.hero{grid-template-columns:104px 1fr;gap:14px}.ataturk-photo{width:104px;height:132px;border-width:3px;border-radius:42% 42% 12px 12px}.hero-copy{padding:4px 0}.hero-sign{font-size:16px}.panel{padding:18px}.nav{position:static}}
 </style></head><body>
 <header><div class="hero">
-<svg class="ataturk-bust" viewBox="0 0 240 240" role="img" aria-label="Stilisierte Büste von Mustafa Kemal Atatürk">
-<defs><linearGradient id="marble" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff0d9"/><stop offset=".55" stop-color="#d9b99a"/><stop offset="1" stop-color="#9c6b55"/></linearGradient></defs>
-<path fill="url(#marble)" stroke="#f9dfc4" stroke-width="2" d="M28 226Q37 193 73 184L91 176 91 153Q70 139 66 112L59 106 62 91Q56 59 80 39Q101 19 132 26Q166 25 178 55Q187 76 177 106L171 111Q168 143 146 155L147 176 169 185Q204 195 215 226Z"/>
-<path fill="#633b32" d="M62 91Q48 49 82 28Q112 6 148 23Q185 40 180 88L168 67Q151 76 129 64Q104 77 77 65Z"/>
-<path fill="#6f4539" d="M93 102Q104 97 115 102M139 102Q151 97 161 102" fill="none" stroke="#6f4539" stroke-width="4" stroke-linecap="round"/>
-<path d="M125 104L119 129Q126 135 135 130" fill="none" stroke="#8a5c49" stroke-width="3" stroke-linecap="round"/>
-<path d="M110 145Q128 153 145 143" fill="none" stroke="#704238" stroke-width="3" stroke-linecap="round"/>
-<path fill="#f4dfc8" d="M91 177L120 195 148 177 170 187 189 226H49L69 188Z"/>
-<path fill="#7e2028" d="M110 193L120 226H138L132 193 122 202Z"/>
-<path fill="#fff0dc" d="M91 178L119 197 105 212 83 185ZM148 178L121 197 137 212 161 185Z"/>
-</svg>
+<img class="ataturk-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kemal_Atat%C3%BCrk%20portrait.jpg?width=600" alt="Historisches Porträt von Mustafa Kemal Atatürk" loading="eager">
 <div class="hero-copy"><div class="eyebrow">Türkçe · Deutsch · Persönlicher Lernbereich</div><h1>Türkisch<br>Vokabeltrainer</h1><p>Ne mutlu Türküm diyene!</p><div class="hero-sign">Mustafa Kemal Atatürk</div></div>
 <div class="flag-mark" aria-hidden="true">☾<br><span style="font-size:48px">★</span></div>
 </div></header>
