@@ -107,6 +107,32 @@ function tab(name){["home","learn","words","add","stats"].forEach(x=>$(x).classL
 document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>tab(b.dataset.tab));$("start").onclick=()=>{tab("learn");next()};$("next").onclick=next;$("show").onclick=show;$("right").onclick=()=>rate(true);$("again").onclick=()=>rate(false);$("direction").onchange=next;$("filter").onchange=next;$("search").oninput=renderWords;$("wordFilter").onchange=renderWords;
 $("addForm").onsubmit=e=>{e.preventDefault();let tr=$("newTr").value.trim(),de=$("newDe").value.trim();if(!tr||!de)return;if(words.some(w=>w.tr.toLocaleLowerCase()===tr.toLocaleLowerCase()&&w.de.toLocaleLowerCase()===de.toLocaleLowerCase())){$("addMessage").textContent="Dieses Wortpaar gibt es bereits.";$("addMessage").className="small danger";return}customWords.push({tr,de});rebuild();save();render();$("addForm").reset();$("addMessage").textContent="Gespeichert! Das Wort ist jetzt in deiner Wortliste.";$("addMessage").className="small success"};
 $("export").onclick=()=>{let a=document.createElement("a"),u=URL.createObjectURL(new Blob([JSON.stringify({version:2,progress,customWords,events},null,2)],{type:"application/json"}));a.href=u;a.download="tuerkisch-lernstand.json";a.click();URL.revokeObjectURL(u)};$("import").onclick=()=>$("file").click();$("file").onchange=e=>{let file=e.target.files[0];if(!file)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);progress=d.progress||{};customWords=d.customWords||[];events=d.events||[];rebuild();save();render();alert("Sicherung geladen.")}catch{alert("Ungültige Sicherungsdatei.")}};r.readAsText(file)};
-async function load(){try{let loaded=false;try{const r=await fetch("data/vokabeln.json",{cache:"no-store"});if(r.ok){const txt=await r.text();if(txt.trim()){baseWords=JSON.parse(txt);loaded=true}}}catch(e){}if(!loaded){const r=await fetch("data/vokabeln.json.gz",{cache:"no-store"});if(!r.ok)throw Error("Vokabeldatei nicht gefunden (HTTP "+r.status+").");if(!("DecompressionStream"in window))throw Error("Dieser Browser kann die komprimierte Vokabeldatei nicht öffnen.");const stream=new Blob([await r.arrayBuffer()]).stream().pipeThrough(new DecompressionStream("gzip"));baseWords=JSON.parse(await new Response(stream).text())}progress=JSON.parse(localStorage.getItem(PROGRESS_KEY)||"{}");customWords=JSON.parse(localStorage.getItem(CUSTOM_KEY)||"[]");events=JSON.parse(localStorage.getItem(EVENT_KEY)||"[]");rebuild();render();next();let incomplete=baseWords.filter(w=>!w.tr||!w.de).length;if(incomplete){$("dataWarning").textContent=incomplete+" Eintrag(e) in der ursprünglichen Excel-Liste sind unvollständig. Sie bleiben unverändert in der Liste.";$("dataWarning").classList.remove("hide")}}catch(e){$("prompt").textContent="Die Vokabelliste konnte nicht geladen werden.";$("dataWarning").textContent="Ladefehler: "+e.message+" – Prüfe, ob data/vokabeln.json oder data/vokabeln.json.gz veröffentlicht ist.";$("dataWarning").classList.remove("hide")}}
+async function load(){
+ try{
+  let loaded=false,errors=[];
+  for(const path of ["vokabeln.json","data/vokabeln.json"]){
+   try{
+    const response=await fetch(path+"?v=20261125",{cache:"no-store"});
+    if(!response.ok){errors.push(path+": HTTP "+response.status);continue}
+    const text=await response.text();
+    const parsed=JSON.parse(text);
+    if(!Array.isArray(parsed)||!parsed.length)throw Error("Datei enthält keine Vokabelliste");
+    if(!parsed.every(w=>w&&typeof w.tr==="string"&&typeof w.de==="string"))throw Error("Einträge haben nicht das erwartete Format");
+    baseWords=parsed;loaded=true;break;
+   }catch(err){errors.push(path+": "+err.message)}
+  }
+  if(!loaded)throw Error("Keine Vokabelliste erreichbar. "+errors.join(" | "));
+  progress=JSON.parse(localStorage.getItem(PROGRESS_KEY)||"{}");
+  customWords=JSON.parse(localStorage.getItem(CUSTOM_KEY)||"[]");
+  events=JSON.parse(localStorage.getItem(EVENT_KEY)||"[]");
+  rebuild();render();next();
+  let incomplete=baseWords.filter(w=>!w.tr||!w.de).length;
+  if(incomplete){$("dataWarning").textContent=incomplete+" Eintrag(e) sind unvollständig.";$("dataWarning").classList.remove("hide")}
+ }catch(e){
+  $("prompt").textContent="Die Vokabelliste konnte nicht geladen werden.";
+  $("dataWarning").textContent="Ladefehler: "+e.message+" – Bitte Seite nach der Veröffentlichung neu laden.";
+  $("dataWarning").classList.remove("hide")
+ } 
+}
 load();
 </script></body></html>
