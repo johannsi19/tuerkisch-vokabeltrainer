@@ -1,0 +1,5910 @@
+[
+  {
+    "tr": "ben",
+    "de": "ich"
+  },
+  {
+    "tr": "sen",
+    "de": "du"
+  },
+  {
+    "tr": "o",
+    "de": "er / sie / es"
+  },
+  {
+    "tr": "biz",
+    "de": "wir"
+  },
+  {
+    "tr": "siz",
+    "de": "ihr / Sie"
+  },
+  {
+    "tr": "onlar",
+    "de": "sie (Mehrzahl)"
+  },
+  {
+    "tr": "bu",
+    "de": "dieser / diese / dieses"
+  },
+  {
+    "tr": "şu",
+    "de": "jener / diese(r) dort"
+  },
+  {
+    "tr": "ne",
+    "de": "was"
+  },
+  {
+    "tr": "kim",
+    "de": "wer"
+  },
+  {
+    "tr": "nerede",
+    "de": "wo"
+  },
+  {
+    "tr": "nereye",
+    "de": "wohin"
+  },
+  {
+    "tr": "nereden",
+    "de": "woher"
+  },
+  {
+    "tr": "nasıl",
+    "de": "wie"
+  },
+  {
+    "tr": "neden",
+    "de": "warum"
+  },
+  {
+    "tr": "niçin",
+    "de": "wofür / weshalb"
+  },
+  {
+    "tr": "hangi",
+    "de": "welche(r/s)"
+  },
+  {
+    "tr": "kaç",
+    "de": "wie viele / wie viel"
+  },
+  {
+    "tr": "ne zaman",
+    "de": "wann"
+  },
+  {
+    "tr": "evet",
+    "de": "ja"
+  },
+  {
+    "tr": "hayır",
+    "de": "nein"
+  },
+  {
+    "tr": "tamam",
+    "de": "okay / in Ordnung"
+  },
+  {
+    "tr": "lütfen",
+    "de": "bitte"
+  },
+  {
+    "tr": "teşekkürler",
+    "de": "danke"
+  },
+  {
+    "tr": "sağ ol",
+    "de": "danke (informell)"
+  },
+  {
+    "tr": "merhaba",
+    "de": "hallo"
+  },
+  {
+    "tr": "günaydın",
+    "de": "guten Morgen"
+  },
+  {
+    "tr": "iyi akşamlar",
+    "de": "guten Abend"
+  },
+  {
+    "tr": "iyi geceler",
+    "de": "gute Nacht"
+  },
+  {
+    "tr": "görüşürüz",
+    "de": "wir sehen uns"
+  },
+  {
+    "tr": "hoşça kal",
+    "de": "leb wohl"
+  },
+  {
+    "tr": "ev",
+    "de": "Haus / Zuhause"
+  },
+  {
+    "tr": "aile",
+    "de": "Familie"
+  },
+  {
+    "tr": "anne",
+    "de": "Mutter"
+  },
+  {
+    "tr": "baba",
+    "de": "Vater"
+  },
+  {
+    "tr": "çocuk",
+    "de": "Kind"
+  },
+  {
+    "tr": "bebek",
+    "de": "Baby"
+  },
+  {
+    "tr": "oğul",
+    "de": "Sohn"
+  },
+  {
+    "tr": "kız",
+    "de": "Tochter / Mädchen"
+  },
+  {
+    "tr": "kardeş",
+    "de": "Geschwister"
+  },
+  {
+    "tr": "abla",
+    "de": "ältere Schwester"
+  },
+  {
+    "tr": "ağabey",
+    "de": "älterer Bruder"
+  },
+  {
+    "tr": "erkek",
+    "de": "Mann / männlich"
+  },
+  {
+    "tr": "kadın",
+    "de": "Frau"
+  },
+  {
+    "tr": "eş",
+    "de": "Ehepartner(in)"
+  },
+  {
+    "tr": "arkadaş",
+    "de": "Freund(in)"
+  },
+  {
+    "tr": "insan",
+    "de": "Mensch"
+  },
+  {
+    "tr": "kişi",
+    "de": "Person"
+  },
+  {
+    "tr": "isim",
+    "de": "Name"
+  },
+  {
+    "tr": "yaş",
+    "de": "Alter"
+  },
+  {
+    "tr": "gün",
+    "de": "Tag"
+  },
+  {
+    "tr": "hafta",
+    "de": "Woche"
+  },
+  {
+    "tr": "ay",
+    "de": "Monat / Mond"
+  },
+  {
+    "tr": "yıl",
+    "de": "Jahr"
+  },
+  {
+    "tr": "sabah",
+    "de": "Morgen"
+  },
+  {
+    "tr": "öğle",
+    "de": "Mittag"
+  },
+  {
+    "tr": "akşam",
+    "de": "Abend"
+  },
+  {
+    "tr": "gece",
+    "de": "Nacht"
+  },
+  {
+    "tr": "bugün",
+    "de": "heute"
+  },
+  {
+    "tr": "dün",
+    "de": "gestern"
+  },
+  {
+    "tr": "yarın",
+    "de": "morgen"
+  },
+  {
+    "tr": "şimdi",
+    "de": "jetzt"
+  },
+  {
+    "tr": "sonra",
+    "de": "später / danach"
+  },
+  {
+    "tr": "önce",
+    "de": "vorher"
+  },
+  {
+    "tr": "zaman",
+    "de": "Zeit"
+  },
+  {
+    "tr": "saat",
+    "de": "Uhr / Stunde"
+  },
+  {
+    "tr": "dakika",
+    "de": "Minute"
+  },
+  {
+    "tr": "bir",
+    "de": "eins"
+  },
+  {
+    "tr": "iki",
+    "de": "zwei"
+  },
+  {
+    "tr": "üç",
+    "de": "drei"
+  },
+  {
+    "tr": "dört",
+    "de": "vier"
+  },
+  {
+    "tr": "beş",
+    "de": "fünf"
+  },
+  {
+    "tr": "altı",
+    "de": "sechs"
+  },
+  {
+    "tr": "yedi",
+    "de": "sieben"
+  },
+  {
+    "tr": "sekiz",
+    "de": "acht"
+  },
+  {
+    "tr": "dokuz",
+    "de": "neun"
+  },
+  {
+    "tr": "on",
+    "de": "zehn"
+  },
+  {
+    "tr": "yirmi",
+    "de": "zwanzig"
+  },
+  {
+    "tr": "otuz",
+    "de": "dreißig"
+  },
+  {
+    "tr": "kırk",
+    "de": "vierzig"
+  },
+  {
+    "tr": "elli",
+    "de": "fünfzig"
+  },
+  {
+    "tr": "yüz",
+    "de": "hundert"
+  },
+  {
+    "tr": "bin",
+    "de": "tausend"
+  },
+  {
+    "tr": "çok",
+    "de": "viel / sehr"
+  },
+  {
+    "tr": "az",
+    "de": "wenig"
+  },
+  {
+    "tr": "daha",
+    "de": "mehr / noch"
+  },
+  {
+    "tr": "en",
+    "de": "am meisten"
+  },
+  {
+    "tr": "her",
+    "de": "jeder"
+  },
+  {
+    "tr": "bazı",
+    "de": "einige"
+  },
+  {
+    "tr": "bütün",
+    "de": "alle / ganz"
+  },
+  {
+    "tr": "hepsi",
+    "de": "alle"
+  },
+  {
+    "tr": "hiç",
+    "de": "nichts / überhaupt"
+  },
+  {
+    "tr": "var",
+    "de": "es gibt / vorhanden"
+  },
+  {
+    "tr": "yok",
+    "de": "es gibt nicht / nicht vorhanden"
+  },
+  {
+    "tr": "olmak",
+    "de": "sein / werden"
+  },
+  {
+    "tr": "yapmak",
+    "de": "machen / tun"
+  },
+  {
+    "tr": "etmek",
+    "de": "tun / machen"
+  },
+  {
+    "tr": "gitmek",
+    "de": "gehen / fahren"
+  },
+  {
+    "tr": "gelmek",
+    "de": "kommen"
+  },
+  {
+    "tr": "almak",
+    "de": "nehmen / kaufen"
+  },
+  {
+    "tr": "vermek",
+    "de": "geben"
+  },
+  {
+    "tr": "istemek",
+    "de": "wollen / möchten"
+  },
+  {
+    "tr": "bilmek",
+    "de": "wissen / kennen"
+  },
+  {
+    "tr": "tanımak",
+    "de": "kennen"
+  },
+  {
+    "tr": "görmek",
+    "de": "sehen"
+  },
+  {
+    "tr": "bakmak",
+    "de": "schauen"
+  },
+  {
+    "tr": "duymak",
+    "de": "hören"
+  },
+  {
+    "tr": "dinlemek",
+    "de": "zuhören"
+  },
+  {
+    "tr": "konuşmak",
+    "de": "sprechen"
+  },
+  {
+    "tr": "söylemek",
+    "de": "sagen"
+  },
+  {
+    "tr": "anlamak",
+    "de": "verstehen"
+  },
+  {
+    "tr": "öğrenmek",
+    "de": "lernen"
+  },
+  {
+    "tr": "öğretmek",
+    "de": "lehren / beibringen"
+  },
+  {
+    "tr": "okumak",
+    "de": "lesen"
+  },
+  {
+    "tr": "yazmak",
+    "de": "schreiben"
+  },
+  {
+    "tr": "çalışmak",
+    "de": "arbeiten / lernen"
+  },
+  {
+    "tr": "yaşamak",
+    "de": "leben"
+  },
+  {
+    "tr": "sevmek",
+    "de": "lieben / mögen"
+  },
+  {
+    "tr": "beğenmek",
+    "de": "gefallen / gut finden"
+  },
+  {
+    "tr": "düşünmek",
+    "de": "denken"
+  },
+  {
+    "tr": "hatırlamak",
+    "de": "sich erinnern"
+  },
+  {
+    "tr": "unutmak",
+    "de": "vergessen"
+  },
+  {
+    "tr": "sormak",
+    "de": "fragen"
+  },
+  {
+    "tr": "cevaplamak",
+    "de": "beantworten"
+  },
+  {
+    "tr": "anlatmak",
+    "de": "erzählen / erklären"
+  },
+  {
+    "tr": "aramak",
+    "de": "suchen / anrufen"
+  },
+  {
+    "tr": "bulmak",
+    "de": "finden"
+  },
+  {
+    "tr": "kaybetmek",
+    "de": "verlieren"
+  },
+  {
+    "tr": "beklemek",
+    "de": "warten"
+  },
+  {
+    "tr": "başlamak",
+    "de": "beginnen"
+  },
+  {
+    "tr": "bitirmek",
+    "de": "beenden"
+  },
+  {
+    "tr": "açmak",
+    "de": "öffnen / einschalten"
+  },
+  {
+    "tr": "kapatmak",
+    "de": "schließen / ausschalten"
+  },
+  {
+    "tr": "kullanmak",
+    "de": "benutzen"
+  },
+  {
+    "tr": "göstermek",
+    "de": "zeigen"
+  },
+  {
+    "tr": "getirmek",
+    "de": "bringen"
+  },
+  {
+    "tr": "götürmek",
+    "de": "wegbringen"
+  },
+  {
+    "tr": "bırakmak",
+    "de": "lassen / abstellen"
+  },
+  {
+    "tr": "tutmak",
+    "de": "halten"
+  },
+  {
+    "tr": "koymak",
+    "de": "legen / stellen"
+  },
+  {
+    "tr": "durmak",
+    "de": "stehen / anhalten"
+  },
+  {
+    "tr": "oturmak",
+    "de": "sitzen / wohnen"
+  },
+  {
+    "tr": "kalkmak",
+    "de": "aufstehen"
+  },
+  {
+    "tr": "yatmak",
+    "de": "liegen / schlafen gehen"
+  },
+  {
+    "tr": "uyumak",
+    "de": "schlafen"
+  },
+  {
+    "tr": "uyanmak",
+    "de": "aufwachen"
+  },
+  {
+    "tr": "yemek",
+    "de": "essen"
+  },
+  {
+    "tr": "içmek",
+    "de": "trinken"
+  },
+  {
+    "tr": "pişirmek",
+    "de": "kochen"
+  },
+  {
+    "tr": "hazırlamak",
+    "de": "vorbereiten"
+  },
+  {
+    "tr": "yıkamak",
+    "de": "waschen"
+  },
+  {
+    "tr": "temizlemek",
+    "de": "reinigen"
+  },
+  {
+    "tr": "giymek",
+    "de": "anziehen / tragen"
+  },
+  {
+    "tr": "çıkarmak",
+    "de": "ausziehen / herausnehmen"
+  },
+  {
+    "tr": "girmek",
+    "de": "hineingehen"
+  },
+  {
+    "tr": "çıkmak",
+    "de": "hinausgehen / ausgehen"
+  },
+  {
+    "tr": "dönmek",
+    "de": "zurückkehren"
+  },
+  {
+    "tr": "geçmek",
+    "de": "vorbeigehen / vergehen"
+  },
+  {
+    "tr": "binmek",
+    "de": "einsteigen"
+  },
+  {
+    "tr": "inmek",
+    "de": "aussteigen"
+  },
+  {
+    "tr": "yürümek",
+    "de": "gehen / laufen"
+  },
+  {
+    "tr": "koşmak",
+    "de": "rennen"
+  },
+  {
+    "tr": "oynamak",
+    "de": "spielen"
+  },
+  {
+    "tr": "gezmek",
+    "de": "spazieren / unterwegs sein"
+  },
+  {
+    "tr": "seyahat etmek",
+    "de": "reisen"
+  },
+  {
+    "tr": "yardım etmek",
+    "de": "helfen"
+  },
+  {
+    "tr": "ödemek",
+    "de": "bezahlen"
+  },
+  {
+    "tr": "satın almak",
+    "de": "kaufen"
+  },
+  {
+    "tr": "satmak",
+    "de": "verkaufen"
+  },
+  {
+    "tr": "göndermek",
+    "de": "schicken"
+  },
+  {
+    "tr": "alınmak",
+    "de": "sich etwas zu Herzen nehmen"
+  },
+  {
+    "tr": "çağırmak",
+    "de": "rufen / einladen"
+  },
+  {
+    "tr": "buluşmak",
+    "de": "sich treffen"
+  },
+  {
+    "tr": "tanışmak",
+    "de": "sich kennenlernen"
+  },
+  {
+    "tr": "evlenmek",
+    "de": "heiraten"
+  },
+  {
+    "tr": "doğmak",
+    "de": "geboren werden"
+  },
+  {
+    "tr": "ölmek",
+    "de": "sterben"
+  },
+  {
+    "tr": "ağlamak",
+    "de": "weinen"
+  },
+  {
+    "tr": "gülmek",
+    "de": "lachen"
+  },
+  {
+    "tr": "gülümsemek",
+    "de": "lächeln"
+  },
+  {
+    "tr": "korkmak",
+    "de": "Angst haben"
+  },
+  {
+    "tr": "kızmak",
+    "de": "sich ärgern"
+  },
+  {
+    "tr": "sevinmek",
+    "de": "sich freuen"
+  },
+  {
+    "tr": "üzülmek",
+    "de": "traurig sein"
+  },
+  {
+    "tr": "yorulmak",
+    "de": "müde werden"
+  },
+  {
+    "tr": "dinlenmek",
+    "de": "sich ausruhen"
+  },
+  {
+    "tr": "hissetmek",
+    "de": "fühlen"
+  },
+  {
+    "tr": "inanmak",
+    "de": "glauben"
+  },
+  {
+    "tr": "umarım",
+    "de": "hoffentlich"
+  },
+  {
+    "tr": "olabilir",
+    "de": "kann sein"
+  },
+  {
+    "tr": "gerekmek",
+    "de": "notwendig sein"
+  },
+  {
+    "tr": "lazım",
+    "de": "nötig / erforderlich"
+  },
+  {
+    "tr": "zorunda olmak",
+    "de": "müssen / gezwungen sein"
+  },
+  {
+    "tr": "yapabilmek",
+    "de": "können / schaffen"
+  },
+  {
+    "tr": "istememek",
+    "de": "nicht wollen"
+  },
+  {
+    "tr": "güzel",
+    "de": "schön"
+  },
+  {
+    "tr": "iyi",
+    "de": "gut"
+  },
+  {
+    "tr": "kötü",
+    "de": "schlecht"
+  },
+  {
+    "tr": "büyük",
+    "de": "groß"
+  },
+  {
+    "tr": "küçük",
+    "de": "klein"
+  },
+  {
+    "tr": "uzun",
+    "de": "lang"
+  },
+  {
+    "tr": "kısa",
+    "de": "kurz"
+  },
+  {
+    "tr": "yüksek",
+    "de": "hoch"
+  },
+  {
+    "tr": "alçak",
+    "de": "niedrig"
+  },
+  {
+    "tr": "geniş",
+    "de": "breit"
+  },
+  {
+    "tr": "dar",
+    "de": "eng"
+  },
+  {
+    "tr": "yeni",
+    "de": "neu"
+  },
+  {
+    "tr": "eski",
+    "de": "alt"
+  },
+  {
+    "tr": "genç",
+    "de": "jung"
+  },
+  {
+    "tr": "yaşlı",
+    "de": "alt"
+  },
+  {
+    "tr": "kolay",
+    "de": "einfach"
+  },
+  {
+    "tr": "zor",
+    "de": "schwierig"
+  },
+  {
+    "tr": "hızlı",
+    "de": "schnell"
+  },
+  {
+    "tr": "yavaş",
+    "de": "langsam"
+  },
+  {
+    "tr": "erken",
+    "de": "früh"
+  },
+  {
+    "tr": "geç",
+    "de": "spät"
+  },
+  {
+    "tr": "sıcak",
+    "de": "warm / heiß"
+  },
+  {
+    "tr": "soğuk",
+    "de": "kalt"
+  },
+  {
+    "tr": "ılık",
+    "de": "lauwarm"
+  },
+  {
+    "tr": "serin",
+    "de": "kühl"
+  },
+  {
+    "tr": "temiz",
+    "de": "sauber"
+  },
+  {
+    "tr": "kirli",
+    "de": "schmutzig"
+  },
+  {
+    "tr": "açık",
+    "de": "offen / hell"
+  },
+  {
+    "tr": "kapalı",
+    "de": "geschlossen"
+  },
+  {
+    "tr": "dolu",
+    "de": "voll"
+  },
+  {
+    "tr": "boş",
+    "de": "leer / frei"
+  },
+  {
+    "tr": "pahalı",
+    "de": "teuer"
+  },
+  {
+    "tr": "ucuz",
+    "de": "günstig / billig"
+  },
+  {
+    "tr": "doğru",
+    "de": "richtig / wahr"
+  },
+  {
+    "tr": "yanlış",
+    "de": "False"
+  },
+  {
+    "tr": "önemli",
+    "de": "wichtig"
+  },
+  {
+    "tr": "gerekli",
+    "de": "notwendig"
+  },
+  {
+    "tr": "mümkün",
+    "de": "möglich"
+  },
+  {
+    "tr": "imkânsız",
+    "de": "unmöglich"
+  },
+  {
+    "tr": "mutlu",
+    "de": "glücklich"
+  },
+  {
+    "tr": "üzgün",
+    "de": "traurig"
+  },
+  {
+    "tr": "yorgun",
+    "de": "müde"
+  },
+  {
+    "tr": "hasta",
+    "de": "krank"
+  },
+  {
+    "tr": "sağlıklı",
+    "de": "gesund"
+  },
+  {
+    "tr": "güçlü",
+    "de": "stark"
+  },
+  {
+    "tr": "zayıf",
+    "de": "schwach / dünn"
+  },
+  {
+    "tr": "güzelce",
+    "de": "schön / ordentlich"
+  },
+  {
+    "tr": "hızlıca",
+    "de": "schnell"
+  },
+  {
+    "tr": "yeterli",
+    "de": "ausreichend"
+  },
+  {
+    "tr": "fazla",
+    "de": "zu viel / zusätzlich"
+  },
+  {
+    "tr": "eksik",
+    "de": "fehlend"
+  },
+  {
+    "tr": "aynı",
+    "de": "derselbe / gleich"
+  },
+  {
+    "tr": "farklı",
+    "de": "unterschiedlich"
+  },
+  {
+    "tr": "benzer",
+    "de": "ähnlich"
+  },
+  {
+    "tr": "yakın",
+    "de": "nahe"
+  },
+  {
+    "tr": "uzak",
+    "de": "weit entfernt"
+  },
+  {
+    "tr": "sağ",
+    "de": "rechts / gesund"
+  },
+  {
+    "tr": "sol",
+    "de": "links"
+  },
+  {
+    "tr": "üst",
+    "de": "oben / Oberseite"
+  },
+  {
+    "tr": "alt",
+    "de": "unten / Unterseite"
+  },
+  {
+    "tr": "iç",
+    "de": "innen"
+  },
+  {
+    "tr": "dış",
+    "de": "außen"
+  },
+  {
+    "tr": "ön",
+    "de": "vorn"
+  },
+  {
+    "tr": "arka",
+    "de": "hinten"
+  },
+  {
+    "tr": "yan",
+    "de": "Neben- / Seite"
+  },
+  {
+    "tr": "karşı",
+    "de": "gegenüber"
+  },
+  {
+    "tr": "burada",
+    "de": "hier"
+  },
+  {
+    "tr": "orada",
+    "de": "dort"
+  },
+  {
+    "tr": "şurada",
+    "de": "dort drüben"
+  },
+  {
+    "tr": "her yerde",
+    "de": "überall"
+  },
+  {
+    "tr": "hiçbir yerde",
+    "de": "nirgendwo"
+  },
+  {
+    "tr": "evde",
+    "de": "zu Hause"
+  },
+  {
+    "tr": "iş",
+    "de": "Arbeit / Job"
+  },
+  {
+    "tr": "iş yeri",
+    "de": "Arbeitsplatz"
+  },
+  {
+    "tr": "ofis",
+    "de": "Büro"
+  },
+  {
+    "tr": "okul",
+    "de": "Schule"
+  },
+  {
+    "tr": "üniversite",
+    "de": "Universität"
+  },
+  {
+    "tr": "öğrenci",
+    "de": "Schüler(in) / Student(in)"
+  },
+  {
+    "tr": "öğretmen",
+    "de": "Lehrer(in)"
+  },
+  {
+    "tr": "doktor",
+    "de": "Arzt / Ärztin"
+  },
+  {
+    "tr": "hemşire",
+    "de": "Pflegekraft"
+  },
+  {
+    "tr": "polis",
+    "de": "Polizei / Polizist(in)"
+  },
+  {
+    "tr": "aşçı",
+    "de": "Koch / Köchin"
+  },
+  {
+    "tr": "şoför",
+    "de": "Fahrer(in)"
+  },
+  {
+    "tr": "satıcı",
+    "de": "Verkäufer(in)"
+  },
+  {
+    "tr": "müşteri",
+    "de": "Kunde / Kundin"
+  },
+  {
+    "tr": "patron",
+    "de": "Chef(in)"
+  },
+  {
+    "tr": "müdür",
+    "de": "Leiter(in) / Direktor(in)"
+  },
+  {
+    "tr": "para",
+    "de": "Geld"
+  },
+  {
+    "tr": "fiyat",
+    "de": "Preis"
+  },
+  {
+    "tr": "hesap",
+    "de": "Rechnung / Konto"
+  },
+  {
+    "tr": "nakit",
+    "de": "Bargeld"
+  },
+  {
+    "tr": "kart",
+    "de": "Karte"
+  },
+  {
+    "tr": "banka",
+    "de": "Bank"
+  },
+  {
+    "tr": "mağaza",
+    "de": "Geschäft"
+  },
+  {
+    "tr": "market",
+    "de": "Supermarkt"
+  },
+  {
+    "tr": "dükkan",
+    "de": "Laden"
+  },
+  {
+    "tr": "alışveriş",
+    "de": "Einkaufen"
+  },
+  {
+    "tr": "pazar",
+    "de": "Markt / Sonntag"
+  },
+  {
+    "tr": "fatura",
+    "de": "Rechnung"
+  },
+  {
+    "tr": "maaş",
+    "de": "Gehalt"
+  },
+  {
+    "tr": "ücret",
+    "de": "Gebühr / Lohn"
+  },
+  {
+    "tr": "bedava",
+    "de": "kostenlos"
+  },
+  {
+    "tr": "indirim",
+    "de": "Rabatt"
+  },
+  {
+    "tr": "yemek",
+    "de": "Essen / Mahlzeit"
+  },
+  {
+    "tr": "kahvaltı",
+    "de": "Frühstück"
+  },
+  {
+    "tr": "öğle yemeği",
+    "de": "Mittagessen"
+  },
+  {
+    "tr": "akşam yemeği",
+    "de": "Abendessen"
+  },
+  {
+    "tr": "ekmek",
+    "de": "Brot"
+  },
+  {
+    "tr": "su",
+    "de": "Wasser"
+  },
+  {
+    "tr": "süt",
+    "de": "Milch"
+  },
+  {
+    "tr": "kahve",
+    "de": "Kaffee"
+  },
+  {
+    "tr": "çay",
+    "de": "Tee"
+  },
+  {
+    "tr": "meyve",
+    "de": "Saft / Frucht"
+  },
+  {
+    "tr": "portakal suyu",
+    "de": "Orangensaft"
+  },
+  {
+    "tr": "şeker",
+    "de": "Zucker"
+  },
+  {
+    "tr": "tuz",
+    "de": "Salz"
+  },
+  {
+    "tr": "karabiber",
+    "de": "Pfeffer"
+  },
+  {
+    "tr": "yağ",
+    "de": "Öl"
+  },
+  {
+    "tr": "zeytinyağı",
+    "de": "Olivenöl"
+  },
+  {
+    "tr": "tereyağı",
+    "de": "Butter"
+  },
+  {
+    "tr": "peynir",
+    "de": "Käse"
+  },
+  {
+    "tr": "yoğurt",
+    "de": "Joghurt"
+  },
+  {
+    "tr": "yumurta",
+    "de": "Ei"
+  },
+  {
+    "tr": "et",
+    "de": "Fleisch"
+  },
+  {
+    "tr": "tavuk",
+    "de": "Hähnchen"
+  },
+  {
+    "tr": "dana eti",
+    "de": "Rindfleisch"
+  },
+  {
+    "tr": "kuzu eti",
+    "de": "Lammfleisch"
+  },
+  {
+    "tr": "balık",
+    "de": "Fisch"
+  },
+  {
+    "tr": "sucuk",
+    "de": "türkische Knoblauchwurst"
+  },
+  {
+    "tr": "sosis",
+    "de": "Würstchen"
+  },
+  {
+    "tr": "pirinç",
+    "de": "Reis"
+  },
+  {
+    "tr": "makarna",
+    "de": "Nudeln"
+  },
+  {
+    "tr": "patates",
+    "de": "Kartoffel"
+  },
+  {
+    "tr": "domates",
+    "de": "Tomate"
+  },
+  {
+    "tr": "salatalık",
+    "de": "Gurke"
+  },
+  {
+    "tr": "soğan",
+    "de": "Zwiebel"
+  },
+  {
+    "tr": "sarımsak",
+    "de": "Knoblauch"
+  },
+  {
+    "tr": "biber",
+    "de": "Paprika / Pfeffer"
+  },
+  {
+    "tr": "havuç",
+    "de": "Karotte"
+  },
+  {
+    "tr": "marul",
+    "de": "Kopfsalat"
+  },
+  {
+    "tr": "salata",
+    "de": "Salat"
+  },
+  {
+    "tr": "lahana",
+    "de": "Kohl"
+  },
+  {
+    "tr": "ıspanak",
+    "de": "Spinat"
+  },
+  {
+    "tr": "mantar",
+    "de": "Pilz"
+  },
+  {
+    "tr": "kabak",
+    "de": "Zucchini / Kürbis"
+  },
+  {
+    "tr": "patlıcan",
+    "de": "Aubergine"
+  },
+  {
+    "tr": "fasulye",
+    "de": "Bohne"
+  },
+  {
+    "tr": "bezelye",
+    "de": "Erbse"
+  },
+  {
+    "tr": "mısır",
+    "de": "Mais"
+  },
+  {
+    "tr": "zeytin",
+    "de": "Olive"
+  },
+  {
+    "tr": "limon",
+    "de": "Zitrone"
+  },
+  {
+    "tr": "elma",
+    "de": "Apfel"
+  },
+  {
+    "tr": "armut",
+    "de": "Birne"
+  },
+  {
+    "tr": "muz",
+    "de": "Banane"
+  },
+  {
+    "tr": "çilek",
+    "de": "Erdbeere"
+  },
+  {
+    "tr": "kiraz",
+    "de": "Kirsche"
+  },
+  {
+    "tr": "karpuz",
+    "de": "Wassermelone"
+  },
+  {
+    "tr": "kavun",
+    "de": "Melone"
+  },
+  {
+    "tr": "üzüm",
+    "de": "Traube"
+  },
+  {
+    "tr": "şeftali",
+    "de": "Pfirsich"
+  },
+  {
+    "tr": "kayısı",
+    "de": "Aprikose"
+  },
+  {
+    "tr": "incir",
+    "de": "Feige"
+  },
+  {
+    "tr": "nar",
+    "de": "Granatapfel"
+  },
+  {
+    "tr": "ananas",
+    "de": "Ananas"
+  },
+  {
+    "tr": "mango",
+    "de": "Mango"
+  },
+  {
+    "tr": "fındık",
+    "de": "Haselnuss"
+  },
+  {
+    "tr": "ceviz",
+    "de": "Walnuss"
+  },
+  {
+    "tr": "badem",
+    "de": "Mandel"
+  },
+  {
+    "tr": "fıstık",
+    "de": "Pistazie / Erdnuss"
+  },
+  {
+    "tr": "bal",
+    "de": "Honig"
+  },
+  {
+    "tr": "reçel",
+    "de": "Marmelade"
+  },
+  {
+    "tr": "un",
+    "de": "Mehl"
+  },
+  {
+    "tr": "pirinç unu",
+    "de": "Reismehl"
+  },
+  {
+    "tr": "çorba",
+    "de": "Suppe"
+  },
+  {
+    "tr": "mercimek",
+    "de": "Linse"
+  },
+  {
+    "tr": "mercimek çorbası",
+    "de": "Linsensuppe"
+  },
+  {
+    "tr": "köfte",
+    "de": "Frikadelle / Hackfleischbällchen"
+  },
+  {
+    "tr": "kebap",
+    "de": "Kebab"
+  },
+  {
+    "tr": "döner",
+    "de": "Döner"
+  },
+  {
+    "tr": "lahmacun",
+    "de": "türkische Pizza"
+  },
+  {
+    "tr": "pide",
+    "de": "türkisches Fladenbrot"
+  },
+  {
+    "tr": "börek",
+    "de": "gefülltes Teiggebäck"
+  },
+  {
+    "tr": "mantı",
+    "de": "türkische Teigtaschen"
+  },
+  {
+    "tr": "dolma",
+    "de": "Gefülltes Gemüse"
+  },
+  {
+    "tr": "sarma",
+    "de": "Gefüllte Weinblätter / Kohlrouladen"
+  },
+  {
+    "tr": "menemen",
+    "de": "türkisches Eiergericht"
+  },
+  {
+    "tr": "pilav",
+    "de": "Reisgericht"
+  },
+  {
+    "tr": "kızartma",
+    "de": "Frittiertes"
+  },
+  {
+    "tr": "patates kızartması",
+    "de": "Pommes frites"
+  },
+  {
+    "tr": "tatlı",
+    "de": "Dessert / Süßspeise"
+  },
+  {
+    "tr": "baklava",
+    "de": "Baklava"
+  },
+  {
+    "tr": "sütlaç",
+    "de": "Milchreis"
+  },
+  {
+    "tr": "dondurma",
+    "de": "Eis"
+  },
+  {
+    "tr": "pasta",
+    "de": "Torte / Kuchen"
+  },
+  {
+    "tr": "kurabiye",
+    "de": "Keks"
+  },
+  {
+    "tr": "çikolata",
+    "de": "Schokolade"
+  },
+  {
+    "tr": "bisküvi",
+    "de": "Keks / Gebäck"
+  },
+  {
+    "tr": "dilim",
+    "de": "Scheibe / Stück"
+  },
+  {
+    "tr": "bardak",
+    "de": "Glas"
+  },
+  {
+    "tr": "fincan",
+    "de": "Tasse"
+  },
+  {
+    "tr": "tabak",
+    "de": "Teller"
+  },
+  {
+    "tr": "çatal",
+    "de": "Gabel"
+  },
+  {
+    "tr": "kaşık",
+    "de": "Löffel"
+  },
+  {
+    "tr": "bıçak",
+    "de": "Messer"
+  },
+  {
+    "tr": "tencere",
+    "de": "Kochtopf"
+  },
+  {
+    "tr": "tava",
+    "de": "Pfanne"
+  },
+  {
+    "tr": "şişe",
+    "de": "Flasche"
+  },
+  {
+    "tr": "peçete",
+    "de": "Serviette"
+  },
+  {
+    "tr": "menü",
+    "de": "Speisekarte / Menü"
+  },
+  {
+    "tr": "restoran",
+    "de": "Restaurant"
+  },
+  {
+    "tr": "lokanta",
+    "de": "Gaststätte"
+  },
+  {
+    "tr": "garson",
+    "de": "Kellner(in)"
+  },
+  {
+    "tr": "açım",
+    "de": "Ich habe Hunger"
+  },
+  {
+    "tr": "susadım",
+    "de": "Ich habe Durst"
+  },
+  {
+    "tr": "tok",
+    "de": "satt"
+  },
+  {
+    "tr": "lezzetli",
+    "de": "lecker"
+  },
+  {
+    "tr": "acı",
+    "de": "scharf / bitter"
+  },
+  {
+    "tr": "tatlı",
+    "de": "süß"
+  },
+  {
+    "tr": "ekşi",
+    "de": "sauer"
+  },
+  {
+    "tr": "taze",
+    "de": "frisch"
+  },
+  {
+    "tr": "bayat",
+    "de": "nicht mehr frisch"
+  },
+  {
+    "tr": "çiğ",
+    "de": "roh"
+  },
+  {
+    "tr": "pişmiş",
+    "de": "gekocht / gar"
+  },
+  {
+    "tr": "az pişmiş",
+    "de": "halbgar"
+  },
+  {
+    "tr": "yanmış",
+    "de": "verbrannt"
+  },
+  {
+    "tr": "ev",
+    "de": "Haus / Zuhause"
+  },
+  {
+    "tr": "oda",
+    "de": "Zimmer"
+  },
+  {
+    "tr": "salon",
+    "de": "Wohnzimmer / Salon"
+  },
+  {
+    "tr": "mutfak",
+    "de": "Küche"
+  },
+  {
+    "tr": "banyo",
+    "de": "Badezimmer"
+  },
+  {
+    "tr": "tuvalet",
+    "de": "Toilette"
+  },
+  {
+    "tr": "yatak",
+    "de": "Oberbett / Bett"
+  },
+  {
+    "tr": "yastık",
+    "de": "Kissen"
+  },
+  {
+    "tr": "battaniye",
+    "de": "Decke"
+  },
+  {
+    "tr": "çarşaf",
+    "de": "Bettlaken"
+  },
+  {
+    "tr": "koltuk",
+    "de": "Sofa / Sessel"
+  },
+  {
+    "tr": "sandalye",
+    "de": "Stuhl"
+  },
+  {
+    "tr": "masa",
+    "de": "Tisch"
+  },
+  {
+    "tr": "kapı",
+    "de": "Tür"
+  },
+  {
+    "tr": "pencere",
+    "de": "Fenster"
+  },
+  {
+    "tr": "duvar",
+    "de": "Wand"
+  },
+  {
+    "tr": "tavan",
+    "de": "Decke"
+  },
+  {
+    "tr": "zemin",
+    "de": "Boden"
+  },
+  {
+    "tr": "anahtar",
+    "de": "Schlüssel"
+  },
+  {
+    "tr": "kilit",
+    "de": "Schloss"
+  },
+  {
+    "tr": "lamba",
+    "de": "Lampe"
+  },
+  {
+    "tr": "ışık",
+    "de": "Licht"
+  },
+  {
+    "tr": "elektrik",
+    "de": "Strom"
+  },
+  {
+    "tr": "priz",
+    "de": "Steckdose"
+  },
+  {
+    "tr": "buzdolabı",
+    "de": "Kühlschrank"
+  },
+  {
+    "tr": "fırın",
+    "de": "Backofen"
+  },
+  {
+    "tr": "ocak",
+    "de": "Herd"
+  },
+  {
+    "tr": "çamaşır makinesi",
+    "de": "Waschmaschine"
+  },
+  {
+    "tr": "bulaşık makinesi",
+    "de": "Geschirrspüler"
+  },
+  {
+    "tr": "televizyon",
+    "de": "Fernseher"
+  },
+  {
+    "tr": "telefon",
+    "de": "Telefon"
+  },
+  {
+    "tr": "bilgisayar",
+    "de": "Computer"
+  },
+  {
+    "tr": "internet",
+    "de": "Internet"
+  },
+  {
+    "tr": "şarj",
+    "de": "Ladung"
+  },
+  {
+    "tr": "şarj cihazı",
+    "de": "Ladegerät"
+  },
+  {
+    "tr": "temizlik",
+    "de": "Reinigung"
+  },
+  {
+    "tr": "çöp",
+    "de": "Müll"
+  },
+  {
+    "tr": "çöp kutusu",
+    "de": "Mülleimer"
+  },
+  {
+    "tr": "süpürge",
+    "de": "Besen / Staubsauger"
+  },
+  {
+    "tr": "havlu",
+    "de": "Handtuch"
+  },
+  {
+    "tr": "sabun",
+    "de": "Seife"
+  },
+  {
+    "tr": "şampuan",
+    "de": "Shampoo"
+  },
+  {
+    "tr": "diş fırçası",
+    "de": "Zahnbürste"
+  },
+  {
+    "tr": "diş macunu",
+    "de": "Zahnpasta"
+  },
+  {
+    "tr": "ayna",
+    "de": "Spiegel"
+  },
+  {
+    "tr": "tarak",
+    "de": "Kamm"
+  },
+  {
+    "tr": "giysi",
+    "de": "Kleidung"
+  },
+  {
+    "tr": "kıyafet",
+    "de": "Kleidung"
+  },
+  {
+    "tr": "pantolon",
+    "de": "Hose"
+  },
+  {
+    "tr": "gömlek",
+    "de": "Hemd"
+  },
+  {
+    "tr": "tişört",
+    "de": "T-Shirt"
+  },
+  {
+    "tr": "kazak",
+    "de": "Pullover"
+  },
+  {
+    "tr": "ceket",
+    "de": "Jacke"
+  },
+  {
+    "tr": "mont",
+    "de": "Winterjacke"
+  },
+  {
+    "tr": "elbise",
+    "de": "Kleid"
+  },
+  {
+    "tr": "etek",
+    "de": "Rock"
+  },
+  {
+    "tr": "ayakkabı",
+    "de": "Schuh"
+  },
+  {
+    "tr": "çorap",
+    "de": "Socke"
+  },
+  {
+    "tr": "şapka",
+    "de": "Mütze / Hut"
+  },
+  {
+    "tr": "atkı",
+    "de": "Schal"
+  },
+  {
+    "tr": "eldiven",
+    "de": "Handschuh"
+  },
+  {
+    "tr": "kemer",
+    "de": "Gürtel"
+  },
+  {
+    "tr": "çanta",
+    "de": "Tasche"
+  },
+  {
+    "tr": "cüzdan",
+    "de": "Geldbörse"
+  },
+  {
+    "tr": "gözlük",
+    "de": "Brille"
+  },
+  {
+    "tr": "saat",
+    "de": "Uhr"
+  },
+  {
+    "tr": "yüzük",
+    "de": "Ring"
+  },
+  {
+    "tr": "kolye",
+    "de": "Halskette"
+  },
+  {
+    "tr": "şemsiye",
+    "de": "Regenschirm"
+  },
+  {
+    "tr": "baş",
+    "de": "Kopf"
+  },
+  {
+    "tr": "saç",
+    "de": "Haar"
+  },
+  {
+    "tr": "yüz",
+    "de": "Gesicht"
+  },
+  {
+    "tr": "alın",
+    "de": "Stirn"
+  },
+  {
+    "tr": "göz",
+    "de": "Auge"
+  },
+  {
+    "tr": "kaş",
+    "de": "Augenbraue"
+  },
+  {
+    "tr": "kirpik",
+    "de": "Wimper"
+  },
+  {
+    "tr": "kulak",
+    "de": "Ohr"
+  },
+  {
+    "tr": "burun",
+    "de": "Nase"
+  },
+  {
+    "tr": "ağız",
+    "de": "Mund"
+  },
+  {
+    "tr": "dudak",
+    "de": "Lippe"
+  },
+  {
+    "tr": "diş",
+    "de": "Zahn"
+  },
+  {
+    "tr": "dil",
+    "de": "Zunge / Sprache"
+  },
+  {
+    "tr": "çene",
+    "de": "Kinn / Kiefer"
+  },
+  {
+    "tr": "yanak",
+    "de": "Wange"
+  },
+  {
+    "tr": "boyun",
+    "de": "Hals"
+  },
+  {
+    "tr": "omuz",
+    "de": "Schulter"
+  },
+  {
+    "tr": "kol",
+    "de": "Arm"
+  },
+  {
+    "tr": "dirsek",
+    "de": "Ellenbogen"
+  },
+  {
+    "tr": "el",
+    "de": "Hand"
+  },
+  {
+    "tr": "parmak",
+    "de": "Finger"
+  },
+  {
+    "tr": "tırnak",
+    "de": "Fingernagel"
+  },
+  {
+    "tr": "göğüs",
+    "de": "Brust"
+  },
+  {
+    "tr": "sırt",
+    "de": "Rücken"
+  },
+  {
+    "tr": "karın",
+    "de": "Bauch"
+  },
+  {
+    "tr": "bel",
+    "de": "Taille / unterer Rücken"
+  },
+  {
+    "tr": "kalça",
+    "de": "Hüfte"
+  },
+  {
+    "tr": "bacak",
+    "de": "Bein"
+  },
+  {
+    "tr": "diz",
+    "de": "Knie"
+  },
+  {
+    "tr": "ayak",
+    "de": "Fuß"
+  },
+  {
+    "tr": "topuk",
+    "de": "Ferse"
+  },
+  {
+    "tr": "ayak parmağı",
+    "de": "Zehe"
+  },
+  {
+    "tr": "deri",
+    "de": "Haut"
+  },
+  {
+    "tr": "kemik",
+    "de": "Knochen"
+  },
+  {
+    "tr": "kas",
+    "de": "Muskel"
+  },
+  {
+    "tr": "kan",
+    "de": "Blut"
+  },
+  {
+    "tr": "kalp",
+    "de": "Herz"
+  },
+  {
+    "tr": "beyin",
+    "de": "Gehirn"
+  },
+  {
+    "tr": "akciğer",
+    "de": "Lunge"
+  },
+  {
+    "tr": "mide",
+    "de": "Magen"
+  },
+  {
+    "tr": "bağırsak",
+    "de": "Darm"
+  },
+  {
+    "tr": "boğaz",
+    "de": "Rachen / Hals"
+  },
+  {
+    "tr": "sağlık",
+    "de": "Gesundheit"
+  },
+  {
+    "tr": "hastalık",
+    "de": "Krankheit"
+  },
+  {
+    "tr": "ağrı",
+    "de": "Schmerz"
+  },
+  {
+    "tr": "baş ağrısı",
+    "de": "Kopfschmerzen"
+  },
+  {
+    "tr": "karın ağrısı",
+    "de": "Bauchschmerzen"
+  },
+  {
+    "tr": "ateş",
+    "de": "Fieber"
+  },
+  {
+    "tr": "öksürük",
+    "de": "Husten"
+  },
+  {
+    "tr": "nezle",
+    "de": "Schnupfen"
+  },
+  {
+    "tr": "grip",
+    "de": "Grippe"
+  },
+  {
+    "tr": "yara",
+    "de": "Wunde"
+  },
+  {
+    "tr": "kanama",
+    "de": "Blutung"
+  },
+  {
+    "tr": "ilaç",
+    "de": "Medikament"
+  },
+  {
+    "tr": "hap",
+    "de": "Tablette"
+  },
+  {
+    "tr": "şurup",
+    "de": "Sirup"
+  },
+  {
+    "tr": "doktor",
+    "de": "Arzt / Ärztin"
+  },
+  {
+    "tr": "hastane",
+    "de": "Krankenhaus"
+  },
+  {
+    "tr": "eczane",
+    "de": "Apotheke"
+  },
+  {
+    "tr": "muayene",
+    "de": "Untersuchung"
+  },
+  {
+    "tr": "randevu",
+    "de": "Termin"
+  },
+  {
+    "tr": "acil",
+    "de": "Notfall / dringend"
+  },
+  {
+    "tr": "ambulans",
+    "de": "Krankenwagen"
+  },
+  {
+    "tr": "aşı",
+    "de": "Impfung"
+  },
+  {
+    "tr": "alerji",
+    "de": "Allergie"
+  },
+  {
+    "tr": "hamile",
+    "de": "schwanger"
+  },
+  {
+    "tr": "doğum",
+    "de": "Geburt"
+  },
+  {
+    "tr": "bebek",
+    "de": "Baby"
+  },
+  {
+    "tr": "emzirmek",
+    "de": "stillen"
+  },
+  {
+    "tr": "bez",
+    "de": "Windel / Tuch"
+  },
+  {
+    "tr": "bebek arabası",
+    "de": "Kinderwagen"
+  },
+  {
+    "tr": "biberon",
+    "de": "Fläschchen"
+  },
+  {
+    "tr": "emzik",
+    "de": "Schnuller"
+  },
+  {
+    "tr": "oyuncak",
+    "de": "Spielzeug"
+  },
+  {
+    "tr": "ağlamak",
+    "de": "weinen"
+  },
+  {
+    "tr": "gülmek",
+    "de": "lachen"
+  },
+  {
+    "tr": "uyumak",
+    "de": "schlafen"
+  },
+  {
+    "tr": "beslemek",
+    "de": "füttern"
+  },
+  {
+    "tr": "büyümek",
+    "de": "wachsen"
+  },
+  {
+    "tr": "anneanne",
+    "de": "mütterliche Großmutter"
+  },
+  {
+    "tr": "babaanne",
+    "de": "väterliche Großmutter"
+  },
+  {
+    "tr": "dede",
+    "de": "Großvater"
+  },
+  {
+    "tr": "büyükanne",
+    "de": "Großmutter"
+  },
+  {
+    "tr": "büyükbaba",
+    "de": "Großvater"
+  },
+  {
+    "tr": "torun",
+    "de": "Enkel / Enkelin"
+  },
+  {
+    "tr": "teyze",
+    "de": "Tante (mütterlicherseits)"
+  },
+  {
+    "tr": "hala",
+    "de": "Tante (väterlicherseits)"
+  },
+  {
+    "tr": "amca",
+    "de": "Onkel (väterlicherseits)"
+  },
+  {
+    "tr": "dayı",
+    "de": "Onkel (mütterlicherseits)"
+  },
+  {
+    "tr": "kuzen",
+    "de": "Cousin / Cousine"
+  },
+  {
+    "tr": "yeğen",
+    "de": "Nichte / Neffe"
+  },
+  {
+    "tr": "gelin",
+    "de": "Braut / Schwiegertochter"
+  },
+  {
+    "tr": "damat",
+    "de": "Bräutigam / Schwiegersohn"
+  },
+  {
+    "tr": "kayınvalide",
+    "de": "Schwiegermutter"
+  },
+  {
+    "tr": "kayınpeder",
+    "de": "Schwiegervater"
+  },
+  {
+    "tr": "kayınbirader",
+    "de": "Schwager"
+  },
+  {
+    "tr": "baldız",
+    "de": "Schwägerin (Schwester der Ehefrau)"
+  },
+  {
+    "tr": "görümce",
+    "de": "Schwägerin (Schwester des Ehemanns)"
+  },
+  {
+    "tr": "enişte",
+    "de": "Schwager"
+  },
+  {
+    "tr": "aşk",
+    "de": "Liebe"
+  },
+  {
+    "tr": "sevgi",
+    "de": "Zuneigung / Liebe"
+  },
+  {
+    "tr": "mutluluk",
+    "de": "Glück"
+  },
+  {
+    "tr": "üzüntü",
+    "de": "Trauer"
+  },
+  {
+    "tr": "korku",
+    "de": "Angst"
+  },
+  {
+    "tr": "öfke",
+    "de": "Wut"
+  },
+  {
+    "tr": "heyecan",
+    "de": "Aufregung"
+  },
+  {
+    "tr": "şaşkınlık",
+    "de": "Überraschung"
+  },
+  {
+    "tr": "utanma",
+    "de": "Scham"
+  },
+  {
+    "tr": "kıskançlık",
+    "de": "Eifersucht"
+  },
+  {
+    "tr": "umut",
+    "de": "Hoffnung"
+  },
+  {
+    "tr": "hayal",
+    "de": "Traum / Vorstellung"
+  },
+  {
+    "tr": "rüya",
+    "de": "Traum (im Schlaf)"
+  },
+  {
+    "tr": "güven",
+    "de": "Vertrauen"
+  },
+  {
+    "tr": "saygı",
+    "de": "Respekt"
+  },
+  {
+    "tr": "sabır",
+    "de": "Geduld"
+  },
+  {
+    "tr": "özlem",
+    "de": "Sehnsucht"
+  },
+  {
+    "tr": "merak",
+    "de": "Neugier"
+  },
+  {
+    "tr": "endişe",
+    "de": "Sorge"
+  },
+  {
+    "tr": "stres",
+    "de": "Stress"
+  },
+  {
+    "tr": "rahat",
+    "de": "Ruhe / bequem"
+  },
+  {
+    "tr": "huzur",
+    "de": "Frieden / innere Ruhe"
+  },
+  {
+    "tr": "yalnız",
+    "de": "einsam / allein"
+  },
+  {
+    "tr": "mutlu",
+    "de": "glücklich"
+  },
+  {
+    "tr": "mutsuz",
+    "de": "unglücklich"
+  },
+  {
+    "tr": "heyecanlı",
+    "de": "aufgeregt"
+  },
+  {
+    "tr": "kızgın",
+    "de": "wütend"
+  },
+  {
+    "tr": "korkmuş",
+    "de": "verängstigt"
+  },
+  {
+    "tr": "şaşkın",
+    "de": "überrascht / erstaunt"
+  },
+  {
+    "tr": "utangaç",
+    "de": "schüchtern"
+  },
+  {
+    "tr": "nazik",
+    "de": "höflich / freundlich"
+  },
+  {
+    "tr": "kibar",
+    "de": "höflich"
+  },
+  {
+    "tr": "sabırlı",
+    "de": "geduldig"
+  },
+  {
+    "tr": "dürüst",
+    "de": "ehrlich"
+  },
+  {
+    "tr": "samimi",
+    "de": "herzlich / aufrichtig"
+  },
+  {
+    "tr": "komik",
+    "de": "lustig"
+  },
+  {
+    "tr": "ciddi",
+    "de": "ernst"
+  },
+  {
+    "tr": "tembel",
+    "de": "faul"
+  },
+  {
+    "tr": "çalışkan",
+    "de": "fleißig"
+  },
+  {
+    "tr": "akıllı",
+    "de": "schlau"
+  },
+  {
+    "tr": "aptal",
+    "de": "dumm"
+  },
+  {
+    "tr": "cesur",
+    "de": "mutig"
+  },
+  {
+    "tr": "utangaç",
+    "de": "schüchtern"
+  },
+  {
+    "tr": "yardımsever",
+    "de": "hilfsbereit"
+  },
+  {
+    "tr": "kaba",
+    "de": "unhöflich / grob"
+  },
+  {
+    "tr": "sakin",
+    "de": "ruhig"
+  },
+  {
+    "tr": "gürültülü",
+    "de": "laut"
+  },
+  {
+    "tr": "sessiz",
+    "de": "leise / still"
+  },
+  {
+    "tr": "tehlikeli",
+    "de": "gefährlich"
+  },
+  {
+    "tr": "güvenli",
+    "de": "sicher"
+  },
+  {
+    "tr": "özgür",
+    "de": "frei"
+  },
+  {
+    "tr": "meşgul",
+    "de": "beschäftigt"
+  },
+  {
+    "tr": "hazır",
+    "de": "bereit / fertig"
+  },
+  {
+    "tr": "yorgun",
+    "de": "müde"
+  },
+  {
+    "tr": "aç",
+    "de": "hungrig"
+  },
+  {
+    "tr": "susamış",
+    "de": "durstig"
+  },
+  {
+    "tr": "hasta",
+    "de": "krank"
+  },
+  {
+    "tr": "sağlıklı",
+    "de": "gesund"
+  },
+  {
+    "tr": "canlı",
+    "de": "lebendig"
+  },
+  {
+    "tr": "ölü",
+    "de": "tot"
+  },
+  {
+    "tr": "güzel",
+    "de": "schön"
+  },
+  {
+    "tr": "çirkin",
+    "de": "hässlich"
+  },
+  {
+    "tr": "tatlı",
+    "de": "süß / lieb"
+  },
+  {
+    "tr": "sevimli",
+    "de": "niedlich"
+  },
+  {
+    "tr": "şişman",
+    "de": "dick"
+  },
+  {
+    "tr": "zayıf",
+    "de": "dünn / schwach"
+  },
+  {
+    "tr": "kilolu",
+    "de": "übergewichtig"
+  },
+  {
+    "tr": "ince",
+    "de": "dünn / fein"
+  },
+  {
+    "tr": "kalın",
+    "de": "dick"
+  },
+  {
+    "tr": "geniş",
+    "de": "breit"
+  },
+  {
+    "tr": "dar",
+    "de": "eng"
+  },
+  {
+    "tr": "yumuşak",
+    "de": "weich"
+  },
+  {
+    "tr": "sert",
+    "de": "hart"
+  },
+  {
+    "tr": "ağır",
+    "de": "schwer"
+  },
+  {
+    "tr": "hafif",
+    "de": "leicht"
+  },
+  {
+    "tr": "ıslak",
+    "de": "nass"
+  },
+  {
+    "tr": "kuru",
+    "de": "trocken"
+  },
+  {
+    "tr": "pürüzsüz",
+    "de": "glatt"
+  },
+  {
+    "tr": "pürüzlü",
+    "de": "rau"
+  },
+  {
+    "tr": "parlak",
+    "de": "glänzend / hell"
+  },
+  {
+    "tr": "karanlık",
+    "de": "dunkel"
+  },
+  {
+    "tr": "renk",
+    "de": "Farbe"
+  },
+  {
+    "tr": "beyaz",
+    "de": "weiß"
+  },
+  {
+    "tr": "siyah",
+    "de": "schwarz"
+  },
+  {
+    "tr": "kırmızı",
+    "de": "rot"
+  },
+  {
+    "tr": "mavi",
+    "de": "blau"
+  },
+  {
+    "tr": "yeşil",
+    "de": "grün"
+  },
+  {
+    "tr": "sarı",
+    "de": "gelb"
+  },
+  {
+    "tr": "turuncu",
+    "de": "orange"
+  },
+  {
+    "tr": "mor",
+    "de": "lila"
+  },
+  {
+    "tr": "pembe",
+    "de": "rosa"
+  },
+  {
+    "tr": "kahverengi",
+    "de": "braun"
+  },
+  {
+    "tr": "gri",
+    "de": "grau"
+  },
+  {
+    "tr": "altın",
+    "de": "gold"
+  },
+  {
+    "tr": "gümüş",
+    "de": "Silber"
+  },
+  {
+    "tr": "açık mavi",
+    "de": "hellblau"
+  },
+  {
+    "tr": "koyu mavi",
+    "de": "dunkelblau"
+  },
+  {
+    "tr": "araba",
+    "de": "Auto"
+  },
+  {
+    "tr": "otomobil",
+    "de": "Pkw"
+  },
+  {
+    "tr": "otobüs",
+    "de": "Bus"
+  },
+  {
+    "tr": "minibüs",
+    "de": "Kleinbus"
+  },
+  {
+    "tr": "tren",
+    "de": "Zug"
+  },
+  {
+    "tr": "metro",
+    "de": "U-Bahn"
+  },
+  {
+    "tr": "tramvay",
+    "de": "Straßenbahn"
+  },
+  {
+    "tr": "uçak",
+    "de": "Flugzeug"
+  },
+  {
+    "tr": "gemi",
+    "de": "Schiff"
+  },
+  {
+    "tr": "tekne",
+    "de": "Boot"
+  },
+  {
+    "tr": "taksi",
+    "de": "Taxi"
+  },
+  {
+    "tr": "bisiklet",
+    "de": "Fahrrad"
+  },
+  {
+    "tr": "motosiklet",
+    "de": "Motorrad"
+  },
+  {
+    "tr": "kamyon",
+    "de": "Lkw"
+  },
+  {
+    "tr": "kamyonet",
+    "de": "Transporter"
+  },
+  {
+    "tr": "ambulans",
+    "de": "Krankenwagen"
+  },
+  {
+    "tr": "polis arabası",
+    "de": "Polizeiauto"
+  },
+  {
+    "tr": "yol",
+    "de": "Straße / Weg"
+  },
+  {
+    "tr": "otoyol",
+    "de": "Autobahn"
+  },
+  {
+    "tr": "cadde",
+    "de": "Allee / Hauptstraße"
+  },
+  {
+    "tr": "sokak",
+    "de": "Straße / Gasse"
+  },
+  {
+    "tr": "kavşak",
+    "de": "Kreuzung"
+  },
+  {
+    "tr": "köprü",
+    "de": "Brücke"
+  },
+  {
+    "tr": "tünel",
+    "de": "Tunnel"
+  },
+  {
+    "tr": "kaldırım",
+    "de": "Gehweg"
+  },
+  {
+    "tr": "trafik",
+    "de": "Verkehr"
+  },
+  {
+    "tr": "trafik ışığı",
+    "de": "Ampel"
+  },
+  {
+    "tr": "yaya",
+    "de": "Fußgänger(in)"
+  },
+  {
+    "tr": "şoför",
+    "de": "Fahrer(in)"
+  },
+  {
+    "tr": "sürücü",
+    "de": "Fahrer(in)"
+  },
+  {
+    "tr": "yolcu",
+    "de": "Fahrgast"
+  },
+  {
+    "tr": "bilet",
+    "de": "Fahrkarte / Ticket"
+  },
+  {
+    "tr": "durak",
+    "de": "Haltestelle"
+  },
+  {
+    "tr": "istasyon",
+    "de": "Bahnhof / Station"
+  },
+  {
+    "tr": "havaalanı",
+    "de": "Flughafen"
+  },
+  {
+    "tr": "terminal",
+    "de": "Terminal"
+  },
+  {
+    "tr": "pasaport",
+    "de": "Reisepass"
+  },
+  {
+    "tr": "kimlik",
+    "de": "Personalausweis / Identität"
+  },
+  {
+    "tr": "vize",
+    "de": "Visum"
+  },
+  {
+    "tr": "valiz",
+    "de": "Koffer"
+  },
+  {
+    "tr": "bavul",
+    "de": "Reisekoffer"
+  },
+  {
+    "tr": "sırt çantası",
+    "de": "Rucksack"
+  },
+  {
+    "tr": "seyahat",
+    "de": "Reise"
+  },
+  {
+    "tr": "tatil",
+    "de": "Urlaub"
+  },
+  {
+    "tr": "otel",
+    "de": "Hotel"
+  },
+  {
+    "tr": "pansiyon",
+    "de": "Pension"
+  },
+  {
+    "tr": "rezervasyon",
+    "de": "Reservierung"
+  },
+  {
+    "tr": "oda numarası",
+    "de": "Zimmernummer"
+  },
+  {
+    "tr": "resepsiyon",
+    "de": "Rezeption"
+  },
+  {
+    "tr": "anahtar",
+    "de": "Schlüssel"
+  },
+  {
+    "tr": "harita",
+    "de": "Karte / Landkarte"
+  },
+  {
+    "tr": "adres",
+    "de": "Adresse"
+  },
+  {
+    "tr": "yön",
+    "de": "Richtung"
+  },
+  {
+    "tr": "sağ taraf",
+    "de": "rechte Seite"
+  },
+  {
+    "tr": "sol taraf",
+    "de": "linke Seite"
+  },
+  {
+    "tr": "düz",
+    "de": "geradeaus"
+  },
+  {
+    "tr": "ileri",
+    "de": "nach vorne"
+  },
+  {
+    "tr": "geri",
+    "de": "zurück"
+  },
+  {
+    "tr": "yakın",
+    "de": "nahe"
+  },
+  {
+    "tr": "uzak",
+    "de": "weit entfernt"
+  },
+  {
+    "tr": "kuzey",
+    "de": "Norden"
+  },
+  {
+    "tr": "güney",
+    "de": "Süden"
+  },
+  {
+    "tr": "doğu",
+    "de": "Osten"
+  },
+  {
+    "tr": "batı",
+    "de": "Westen"
+  },
+  {
+    "tr": "kuzeydoğu",
+    "de": "Nordosten"
+  },
+  {
+    "tr": "kuzeybatı",
+    "de": "Nordwesten"
+  },
+  {
+    "tr": "güneydoğu",
+    "de": "Südosten"
+  },
+  {
+    "tr": "güneybatı",
+    "de": "Südwesten"
+  },
+  {
+    "tr": "dur",
+    "de": "Stopp / Halt"
+  },
+  {
+    "tr": "yavaşla",
+    "de": "langsamer werden"
+  },
+  {
+    "tr": "hızlan",
+    "de": "beschleunige"
+  },
+  {
+    "tr": "dön",
+    "de": "abbiegen / umdrehen"
+  },
+  {
+    "tr": "sağa dön",
+    "de": "rechts abbiegen"
+  },
+  {
+    "tr": "sola dön",
+    "de": "links abbiegen"
+  },
+  {
+    "tr": "düz git",
+    "de": "geradeaus gehen / fahren"
+  },
+  {
+    "tr": "park etmek",
+    "de": "parken"
+  },
+  {
+    "tr": "yakıt",
+    "de": "Kraftstoff"
+  },
+  {
+    "tr": "benzin",
+    "de": "Benzin"
+  },
+  {
+    "tr": "dizel",
+    "de": "Diesel"
+  },
+  {
+    "tr": "elektrikli",
+    "de": "elektrisch"
+  },
+  {
+    "tr": "şarj istasyonu",
+    "de": "Ladestation"
+  },
+  {
+    "tr": "benzin istasyonu",
+    "de": "Tankstelle"
+  },
+  {
+    "tr": "lastik",
+    "de": "Reifen"
+  },
+  {
+    "tr": "motor",
+    "de": "Motor"
+  },
+  {
+    "tr": "fren",
+    "de": "Bremse"
+  },
+  {
+    "tr": "kaza",
+    "de": "Unfall"
+  },
+  {
+    "tr": "tamir",
+    "de": "Reparatur"
+  },
+  {
+    "tr": "tamirci",
+    "de": "Mechaniker"
+  },
+  {
+    "tr": "hava",
+    "de": "Wetter / Luft"
+  },
+  {
+    "tr": "hava durumu",
+    "de": "Wetterbericht"
+  },
+  {
+    "tr": "güneş",
+    "de": "Sonne"
+  },
+  {
+    "tr": "ay",
+    "de": "Mond"
+  },
+  {
+    "tr": "yıldız",
+    "de": "Stern"
+  },
+  {
+    "tr": "gökyüzü",
+    "de": "Himmel"
+  },
+  {
+    "tr": "bulut",
+    "de": "Wolke"
+  },
+  {
+    "tr": "yağmur",
+    "de": "Regen"
+  },
+  {
+    "tr": "kar",
+    "de": "Schnee"
+  },
+  {
+    "tr": "dolu",
+    "de": "Hagel"
+  },
+  {
+    "tr": "rüzgâr",
+    "de": "Wind"
+  },
+  {
+    "tr": "fırtına",
+    "de": "Sturm"
+  },
+  {
+    "tr": "şimşek",
+    "de": "Blitz"
+  },
+  {
+    "tr": "gök gürültüsü",
+    "de": "Donner"
+  },
+  {
+    "tr": "sis",
+    "de": "Nebel"
+  },
+  {
+    "tr": "buz",
+    "de": "Eis"
+  },
+  {
+    "tr": "don",
+    "de": "Dauerfrost"
+  },
+  {
+    "tr": "sıcaklık",
+    "de": "Temperatur"
+  },
+  {
+    "tr": "derece",
+    "de": "Grad"
+  },
+  {
+    "tr": "güneşli",
+    "de": "sonnig"
+  },
+  {
+    "tr": "bulutlu",
+    "de": "bewölkt"
+  },
+  {
+    "tr": "yağmurlu",
+    "de": "regnerisch"
+  },
+  {
+    "tr": "karlı",
+    "de": "verschneit"
+  },
+  {
+    "tr": "rüzgârlı",
+    "de": "windig"
+  },
+  {
+    "tr": "fırtınalı",
+    "de": "stürmisch"
+  },
+  {
+    "tr": "nemli",
+    "de": "feucht"
+  },
+  {
+    "tr": "kuru",
+    "de": "trocken"
+  },
+  {
+    "tr": "mevsim",
+    "de": "Jahreszeit"
+  },
+  {
+    "tr": "ilkbahar",
+    "de": "Frühling"
+  },
+  {
+    "tr": "yaz",
+    "de": "Sommer"
+  },
+  {
+    "tr": "sonbahar",
+    "de": "Herbst"
+  },
+  {
+    "tr": "kış",
+    "de": "Winter"
+  },
+  {
+    "tr": "doğa",
+    "de": "Natur"
+  },
+  {
+    "tr": "orman",
+    "de": "Wald"
+  },
+  {
+    "tr": "ağaç",
+    "de": "Baum"
+  },
+  {
+    "tr": "çiçek",
+    "de": "Blume"
+  },
+  {
+    "tr": "çimen",
+    "de": "Gras"
+  },
+  {
+    "tr": "yaprak",
+    "de": "Blatt"
+  },
+  {
+    "tr": "dal",
+    "de": "Ast"
+  },
+  {
+    "tr": "kök",
+    "de": "Wurzel"
+  },
+  {
+    "tr": "dağ",
+    "de": "Berg"
+  },
+  {
+    "tr": "tepe",
+    "de": "Hügel"
+  },
+  {
+    "tr": "vadi",
+    "de": "Tal"
+  },
+  {
+    "tr": "nehir",
+    "de": "Fluss"
+  },
+  {
+    "tr": "göl",
+    "de": "See"
+  },
+  {
+    "tr": "deniz",
+    "de": "Meer"
+  },
+  {
+    "tr": "okyanus",
+    "de": "Ozean"
+  },
+  {
+    "tr": "plaj",
+    "de": "Strand"
+  },
+  {
+    "tr": "sahil",
+    "de": "Küste / Ufer"
+  },
+  {
+    "tr": "ada",
+    "de": "Insel"
+  },
+  {
+    "tr": "şelale",
+    "de": "Wasserfall"
+  },
+  {
+    "tr": "mağara",
+    "de": "Höhle"
+  },
+  {
+    "tr": "taş",
+    "de": "Stein"
+  },
+  {
+    "tr": "kum",
+    "de": "Sand"
+  },
+  {
+    "tr": "toprak",
+    "de": "Erde / Boden"
+  },
+  {
+    "tr": "ateş",
+    "de": "Feuer"
+  },
+  {
+    "tr": "duman",
+    "de": "Rauch"
+  },
+  {
+    "tr": "hava kirliliği",
+    "de": "Luftverschmutzung"
+  },
+  {
+    "tr": "hayvan",
+    "de": "Tier"
+  },
+  {
+    "tr": "köpek",
+    "de": "Hund"
+  },
+  {
+    "tr": "kedi",
+    "de": "Katze"
+  },
+  {
+    "tr": "kuş",
+    "de": "Vogel"
+  },
+  {
+    "tr": "at",
+    "de": "Pferd"
+  },
+  {
+    "tr": "inek",
+    "de": "Kuh"
+  },
+  {
+    "tr": "boğa",
+    "de": "Stier"
+  },
+  {
+    "tr": "koyun",
+    "de": "Schaf"
+  },
+  {
+    "tr": "keçi",
+    "de": "Ziege"
+  },
+  {
+    "tr": "domuz",
+    "de": "Schwein"
+  },
+  {
+    "tr": "tavşan",
+    "de": "Kaninchen"
+  },
+  {
+    "tr": "fare",
+    "de": "Maus"
+  },
+  {
+    "tr": "aslan",
+    "de": "Löwe"
+  },
+  {
+    "tr": "kaplan",
+    "de": "Tiger"
+  },
+  {
+    "tr": "fil",
+    "de": "Elefant"
+  },
+  {
+    "tr": "ayı",
+    "de": "Bär"
+  },
+  {
+    "tr": "tilki",
+    "de": "Fuchs"
+  },
+  {
+    "tr": "kurt",
+    "de": "Wolf"
+  },
+  {
+    "tr": "geyik",
+    "de": "Hirsch"
+  },
+  {
+    "tr": "maymun",
+    "de": "Affe"
+  },
+  {
+    "tr": "yılan",
+    "de": "Schlange"
+  },
+  {
+    "tr": "kaplumbağa",
+    "de": "Schildkröte"
+  },
+  {
+    "tr": "kurbağa",
+    "de": "Frosch"
+  },
+  {
+    "tr": "arı",
+    "de": "Biene"
+  },
+  {
+    "tr": "kelebek",
+    "de": "Schmetterling"
+  },
+  {
+    "tr": "sinek",
+    "de": "Fliege"
+  },
+  {
+    "tr": "sivrisinek",
+    "de": "Mücke"
+  },
+  {
+    "tr": "örümcek",
+    "de": "Spinne"
+  },
+  {
+    "tr": "karınca",
+    "de": "Ameise"
+  },
+  {
+    "tr": "kartal",
+    "de": "Adler"
+  },
+  {
+    "tr": "tavuk",
+    "de": "Huhn"
+  },
+  {
+    "tr": "horoz",
+    "de": "Hahn"
+  },
+  {
+    "tr": "ördek",
+    "de": "Ente"
+  },
+  {
+    "tr": "kaz",
+    "de": "Gans"
+  },
+  {
+    "tr": "balina",
+    "de": "Wal"
+  },
+  {
+    "tr": "yunus",
+    "de": "Delfin"
+  },
+  {
+    "tr": "köpek balığı",
+    "de": "Hai"
+  },
+  {
+    "tr": "yengeç",
+    "de": "Krabbe"
+  },
+  {
+    "tr": "karides",
+    "de": "Garnele"
+  },
+  {
+    "tr": "böcek",
+    "de": "Insekt"
+  },
+  {
+    "tr": "çiftlik",
+    "de": "Bauernhof"
+  },
+  {
+    "tr": "bahçe",
+    "de": "Garten"
+  },
+  {
+    "tr": "tarla",
+    "de": "Feld"
+  },
+  {
+    "tr": "köy",
+    "de": "Dorf"
+  },
+  {
+    "tr": "şehir",
+    "de": "Stadt"
+  },
+  {
+    "tr": "kasaba",
+    "de": "Kleinstadt"
+  },
+  {
+    "tr": "ülke",
+    "de": "Land"
+  },
+  {
+    "tr": "başkent",
+    "de": "Hauptstadt"
+  },
+  {
+    "tr": "sınır",
+    "de": "Grenze"
+  },
+  {
+    "tr": "ve",
+    "de": "und"
+  },
+  {
+    "tr": "veya",
+    "de": "oder"
+  },
+  {
+    "tr": "ama",
+    "de": "aber"
+  },
+  {
+    "tr": "fakat",
+    "de": "jedoch"
+  },
+  {
+    "tr": "çünkü",
+    "de": "weil / denn"
+  },
+  {
+    "tr": "bu yüzden",
+    "de": "deshalb"
+  },
+  {
+    "tr": "eğer",
+    "de": "wenn / falls"
+  },
+  {
+    "tr": "ise",
+    "de": "wenn aber / hingegen"
+  },
+  {
+    "tr": "hem",
+    "de": "und zugleich"
+  },
+  {
+    "tr": "ya",
+    "de": "oder"
+  },
+  {
+    "tr": "de",
+    "de": "auch"
+  },
+  {
+    "tr": "bile",
+    "de": "sogar"
+  },
+  {
+    "tr": "sadece",
+    "de": "nur"
+  },
+  {
+    "tr": "ancak",
+    "de": "jedoch / nur"
+  },
+  {
+    "tr": "belki",
+    "de": "vielleicht"
+  },
+  {
+    "tr": "kesinlikle",
+    "de": "auf jeden Fall"
+  },
+  {
+    "tr": "elbette",
+    "de": "natürlich"
+  },
+  {
+    "tr": "tabii",
+    "de": "natürlich / klar"
+  },
+  {
+    "tr": "gerçekten",
+    "de": "wirklich"
+  },
+  {
+    "tr": "aslında",
+    "de": "eigentlich"
+  },
+  {
+    "tr": "özellikle",
+    "de": "besonders"
+  },
+  {
+    "tr": "genellikle",
+    "de": "gewöhnlich"
+  },
+  {
+    "tr": "bazen",
+    "de": "manchmal"
+  },
+  {
+    "tr": "sık sık",
+    "de": "häufig"
+  },
+  {
+    "tr": "nadiren",
+    "de": "selten"
+  },
+  {
+    "tr": "asla",
+    "de": "niemals"
+  },
+  {
+    "tr": "daima",
+    "de": "immer"
+  },
+  {
+    "tr": "her zaman",
+    "de": "jederzeit / immer"
+  },
+  {
+    "tr": "henüz",
+    "de": "noch nicht"
+  },
+  {
+    "tr": "zaten",
+    "de": "sowieso"
+  },
+  {
+    "tr": "artık",
+    "de": "nicht mehr / jetzt"
+  },
+  {
+    "tr": "şimdilik",
+    "de": "vorerst"
+  },
+  {
+    "tr": "hemen",
+    "de": "sofort"
+  },
+  {
+    "tr": "biraz",
+    "de": "ein bisschen"
+  },
+  {
+    "tr": "birkaç",
+    "de": "einige"
+  },
+  {
+    "tr": "birçok",
+    "de": "viele"
+  },
+  {
+    "tr": "herkes",
+    "de": "jeder / alle"
+  },
+  {
+    "tr": "her şey",
+    "de": "alles"
+  },
+  {
+    "tr": "hiç kimse",
+    "de": "niemand"
+  },
+  {
+    "tr": "bir şey",
+    "de": "etwas"
+  },
+  {
+    "tr": "hiçbir şey",
+    "de": "nichts"
+  },
+  {
+    "tr": "başka",
+    "de": "andere(r/s)"
+  },
+  {
+    "tr": "diğer",
+    "de": "übrige(r/s)"
+  },
+  {
+    "tr": "kendi",
+    "de": "selbst / eigene(r/s)"
+  },
+  {
+    "tr": "birlikte",
+    "de": "zusammen"
+  },
+  {
+    "tr": "ayrı",
+    "de": "getrennt"
+  },
+  {
+    "tr": "tek",
+    "de": "allein / einzeln"
+  },
+  {
+    "tr": "çift",
+    "de": "Paar"
+  },
+  {
+    "tr": "belki de",
+    "de": "vielleicht sogar"
+  },
+  {
+    "tr": "elbette ki",
+    "de": "natürlich"
+  },
+  {
+    "tr": "buraya",
+    "de": "hierher"
+  },
+  {
+    "tr": "oraya",
+    "de": "dorthin"
+  },
+  {
+    "tr": "şuraya",
+    "de": "dorthin (da)"
+  },
+  {
+    "tr": "buradan",
+    "de": "von hier"
+  },
+  {
+    "tr": "oradan",
+    "de": "von dort"
+  },
+  {
+    "tr": "şuradan",
+    "de": "von dort drüben"
+  },
+  {
+    "tr": "içinde",
+    "de": "darin / innerhalb"
+  },
+  {
+    "tr": "dışında",
+    "de": "außerhalb"
+  },
+  {
+    "tr": "üzerinde",
+    "de": "darauf / darüber"
+  },
+  {
+    "tr": "altında",
+    "de": "darunter"
+  },
+  {
+    "tr": "yanında",
+    "de": "daneben / bei"
+  },
+  {
+    "tr": "arasında",
+    "de": "dazwischen"
+  },
+  {
+    "tr": "önünde",
+    "de": "davor"
+  },
+  {
+    "tr": "arkasında",
+    "de": "dahinter"
+  },
+  {
+    "tr": "karşısında",
+    "de": "gegenüber"
+  },
+  {
+    "tr": "için",
+    "de": "für"
+  },
+  {
+    "tr": "ile",
+    "de": "mit"
+  },
+  {
+    "tr": "gibi",
+    "de": "wie"
+  },
+  {
+    "tr": "kadar",
+    "de": "bis / so viel wie"
+  },
+  {
+    "tr": "göre",
+    "de": "nach / gemäß"
+  },
+  {
+    "tr": "hakkında",
+    "de": "über"
+  },
+  {
+    "tr": "rağmen",
+    "de": "trotz"
+  },
+  {
+    "tr": "beri",
+    "de": "seit"
+  },
+  {
+    "tr": "boyunca",
+    "de": "während / entlang"
+  },
+  {
+    "tr": "doğru",
+    "de": "Richtung / richtig"
+  },
+  {
+    "tr": "karşı",
+    "de": "gegen"
+  },
+  {
+    "tr": "yüzünden",
+    "de": "wegen"
+  },
+  {
+    "tr": "sayesinde",
+    "de": "dank"
+  },
+  {
+    "tr": "önce",
+    "de": "vor"
+  },
+  {
+    "tr": "sonra",
+    "de": "nach"
+  },
+  {
+    "tr": "sırasında",
+    "de": "während"
+  },
+  {
+    "tr": "üzerine",
+    "de": "auf / über"
+  },
+  {
+    "tr": "dışarı",
+    "de": "raus / draußen"
+  },
+  {
+    "tr": "içeri",
+    "de": "hinein / drinnen"
+  },
+  {
+    "tr": "yukarı",
+    "de": "nach oben"
+  },
+  {
+    "tr": "aşağı",
+    "de": "nach unten"
+  },
+  {
+    "tr": "ileri",
+    "de": "vorwärts"
+  },
+  {
+    "tr": "geri",
+    "de": "zurück"
+  },
+  {
+    "tr": "birinci",
+    "de": "erste(r/s)"
+  },
+  {
+    "tr": "ikinci",
+    "de": "zweite(r/s)"
+  },
+  {
+    "tr": "üçüncü",
+    "de": "dritte(r/s)"
+  },
+  {
+    "tr": "son",
+    "de": "letzte(r/s)"
+  },
+  {
+    "tr": "ilk",
+    "de": "erste(r/s)"
+  },
+  {
+    "tr": "önemli",
+    "de": "wichtig"
+  },
+  {
+    "tr": "önemsiz",
+    "de": "unwichtig"
+  },
+  {
+    "tr": "mümkün",
+    "de": "möglich"
+  },
+  {
+    "tr": "imkânsız",
+    "de": "unmöglich"
+  },
+  {
+    "tr": "doğru",
+    "de": "richtig"
+  },
+  {
+    "tr": "yanlış",
+    "de": "False"
+  },
+  {
+    "tr": "gerçek",
+    "de": "wirklich / Realität"
+  },
+  {
+    "tr": "yalan",
+    "de": "Lüge"
+  },
+  {
+    "tr": "sebep",
+    "de": "Grund / Ursache"
+  },
+  {
+    "tr": "sonuç",
+    "de": "Ergebnis / Folge"
+  },
+  {
+    "tr": "fark",
+    "de": "Unterschied"
+  },
+  {
+    "tr": "örnek",
+    "de": "Beispiel"
+  },
+  {
+    "tr": "konu",
+    "de": "Thema"
+  },
+  {
+    "tr": "soru",
+    "de": "Frage"
+  },
+  {
+    "tr": "cevap",
+    "de": "Antwort"
+  },
+  {
+    "tr": "fikir",
+    "de": "Gedanke / Meinung"
+  },
+  {
+    "tr": "düşünce",
+    "de": "Gedanke"
+  },
+  {
+    "tr": "karar",
+    "de": "Entscheidung"
+  },
+  {
+    "tr": "seçenek",
+    "de": "Option"
+  },
+  {
+    "tr": "problem",
+    "de": "Problem"
+  },
+  {
+    "tr": "çözüm",
+    "de": "Lösung"
+  },
+  {
+    "tr": "yardım",
+    "de": "Hilfe"
+  },
+  {
+    "tr": "bilgi",
+    "de": "Information / Wissen"
+  },
+  {
+    "tr": "haber",
+    "de": "Nachricht"
+  },
+  {
+    "tr": "mesaj",
+    "de": "Nachricht"
+  },
+  {
+    "tr": "telefon görüşmesi",
+    "de": "Telefonat"
+  },
+  {
+    "tr": "konuşma",
+    "de": "Gespräch"
+  },
+  {
+    "tr": "dil",
+    "de": "Sprache"
+  },
+  {
+    "tr": "kelime",
+    "de": "Wort"
+  },
+  {
+    "tr": "cümle",
+    "de": "Satz"
+  },
+  {
+    "tr": "anlam",
+    "de": "Bedeutung"
+  },
+  {
+    "tr": "tercüme",
+    "de": "Übersetzung"
+  },
+  {
+    "tr": "Türkçe",
+    "de": "Türkisch"
+  },
+  {
+    "tr": "Almanca",
+    "de": "Deutsch"
+  },
+  {
+    "tr": "İngilizce",
+    "de": "Englisch"
+  },
+  {
+    "tr": "söz",
+    "de": "Wort / Versprechen"
+  },
+  {
+    "tr": "ses",
+    "de": "Stimme / Geräusch"
+  },
+  {
+    "tr": "gürültü",
+    "de": "Lärm"
+  },
+  {
+    "tr": "sessizlik",
+    "de": "Stille"
+  },
+  {
+    "tr": "şarkı",
+    "de": "Lied"
+  },
+  {
+    "tr": "müzik",
+    "de": "Musik"
+  },
+  {
+    "tr": "film",
+    "de": "Film"
+  },
+  {
+    "tr": "dizi",
+    "de": "Fernsehserie"
+  },
+  {
+    "tr": "kitap",
+    "de": "Buch"
+  },
+  {
+    "tr": "gazete",
+    "de": "Zeitung"
+  },
+  {
+    "tr": "dergi",
+    "de": "Zeitschrift"
+  },
+  {
+    "tr": "fotoğraf",
+    "de": "Foto"
+  },
+  {
+    "tr": "resim",
+    "de": "Bild / Gemälde"
+  },
+  {
+    "tr": "video",
+    "de": "Video"
+  },
+  {
+    "tr": "oyun",
+    "de": "Spiel"
+  },
+  {
+    "tr": "spor",
+    "de": "Sport"
+  },
+  {
+    "tr": "futbol",
+    "de": "Fußball"
+  },
+  {
+    "tr": "basketbol",
+    "de": "Basketball"
+  },
+  {
+    "tr": "yüzme",
+    "de": "Schwimmen"
+  },
+  {
+    "tr": "koşu",
+    "de": "Laufen"
+  },
+  {
+    "tr": "yürüyüş",
+    "de": "Spaziergang"
+  },
+  {
+    "tr": "egzersiz",
+    "de": "Übung"
+  },
+  {
+    "tr": "antrenman",
+    "de": "Training"
+  },
+  {
+    "tr": "maç",
+    "de": "Spiel / Wettkampf"
+  },
+  {
+    "tr": "takım",
+    "de": "Mannschaft"
+  },
+  {
+    "tr": "oyuncu",
+    "de": "Spieler(in)"
+  },
+  {
+    "tr": "kazanmak",
+    "de": "gewinnen"
+  },
+  {
+    "tr": "kaybetmek",
+    "de": "verlieren"
+  },
+  {
+    "tr": "beraberlik",
+    "de": "Unentschieden"
+  },
+  {
+    "tr": "başarı",
+    "de": "Erfolg"
+  },
+  {
+    "tr": "başarılı",
+    "de": "erfolgreich"
+  },
+  {
+    "tr": "başarısız",
+    "de": "erfolglos"
+  },
+  {
+    "tr": "şans",
+    "de": "Glück / Zufall"
+  },
+  {
+    "tr": "şanslı",
+    "de": "Glücklich / vom Glück begünstigt"
+  },
+  {
+    "tr": "şanssız",
+    "de": "Pech gehabt / unglücklich"
+  },
+  {
+    "tr": "kolayca",
+    "de": "einfach / problemlos"
+  },
+  {
+    "tr": "zorla",
+    "de": "mit Gewalt / gezwungenermaßen"
+  },
+  {
+    "tr": "yavaşça",
+    "de": "langsam"
+  },
+  {
+    "tr": "dikkatli",
+    "de": "vorsichtig / aufmerksam"
+  },
+  {
+    "tr": "dikkat",
+    "de": "D aufmerksamkeit"
+  },
+  {
+    "tr": "dikkat et",
+    "de": "Pass auf"
+  },
+  {
+    "tr": "unutma",
+    "de": "Vergiss nicht"
+  },
+  {
+    "tr": "hatırla",
+    "de": "Erinnere dich"
+  },
+  {
+    "tr": "bekle",
+    "de": "Warte"
+  },
+  {
+    "tr": "dinle",
+    "de": "Hör zu"
+  },
+  {
+    "tr": "bak",
+    "de": "Schau"
+  },
+  {
+    "tr": "gel",
+    "de": "Komm"
+  },
+  {
+    "tr": "git",
+    "de": "Geh"
+  },
+  {
+    "tr": "otur",
+    "de": "Setz dich"
+  },
+  {
+    "tr": "kalk",
+    "de": "Steh auf"
+  },
+  {
+    "tr": "aç",
+    "de": "Mach auf"
+  },
+  {
+    "tr": "kapat",
+    "de": "Mach zu"
+  },
+  {
+    "tr": "başla",
+    "de": "Fang an"
+  },
+  {
+    "tr": "bitir",
+    "de": "Beende"
+  },
+  {
+    "tr": "anlat",
+    "de": "Erzähl"
+  },
+  {
+    "tr": "sor",
+    "de": "Frag"
+  },
+  {
+    "tr": "cevap ver",
+    "de": "Antworte"
+  },
+  {
+    "tr": "yardım et",
+    "de": "Hilf"
+  },
+  {
+    "tr": "tekrar",
+    "de": "Wiederholung / noch einmal"
+  },
+  {
+    "tr": "bir daha",
+    "de": "noch einmal"
+  },
+  {
+    "tr": "yeter",
+    "de": "genug"
+  },
+  {
+    "tr": "tamamen",
+    "de": "vollständig"
+  },
+  {
+    "tr": "neredeyse",
+    "de": "fast"
+  },
+  {
+    "tr": "yaklaşık",
+    "de": "ungefähr"
+  },
+  {
+    "tr": "özellikle",
+    "de": "besonders"
+  },
+  {
+    "tr": "örneğin",
+    "de": "zum Beispiel"
+  },
+  {
+    "tr": "yani",
+    "de": "also / das heißt"
+  },
+  {
+    "tr": "demek",
+    "de": "heißen / bedeuten"
+  },
+  {
+    "tr": "kimlik kartı",
+    "de": "Personalausweis"
+  },
+  {
+    "tr": "ehliyet",
+    "de": "Führerschein"
+  },
+  {
+    "tr": "sürücü belgesi",
+    "de": "Führerschein"
+  },
+  {
+    "tr": "doğum belgesi",
+    "de": "Geburtsurkunde"
+  },
+  {
+    "tr": "evlilik cüzdanı",
+    "de": "Familienstammbuch / Eheurkunde"
+  },
+  {
+    "tr": "oturma izni",
+    "de": "Aufenthaltserlaubnis"
+  },
+  {
+    "tr": "çalışma izni",
+    "de": "Arbeitserlaubnis"
+  },
+  {
+    "tr": "başvuru",
+    "de": "Antrag / Bewerbung"
+  },
+  {
+    "tr": "form",
+    "de": "Formular"
+  },
+  {
+    "tr": "imza",
+    "de": "Unterschrift"
+  },
+  {
+    "tr": "belge",
+    "de": "Dokument"
+  },
+  {
+    "tr": "evrak",
+    "de": "Unterlagen / Schriftstücke"
+  },
+  {
+    "tr": "dosya",
+    "de": "Akte / Datei"
+  },
+  {
+    "tr": "fotokopi",
+    "de": "Fotokopie"
+  },
+  {
+    "tr": "çıktı",
+    "de": "Ausdruck"
+  },
+  {
+    "tr": "başvuru formu",
+    "de": "Antragsformular"
+  },
+  {
+    "tr": "randevu almak",
+    "de": "einen Termin vereinbaren"
+  },
+  {
+    "tr": "iptal etmek",
+    "de": "absagen / stornieren"
+  },
+  {
+    "tr": "onaylamak",
+    "de": "bestätigen"
+  },
+  {
+    "tr": "reddetmek",
+    "de": "ablehnen"
+  },
+  {
+    "tr": "izin",
+    "de": "Erlaubnis / Urlaub"
+  },
+  {
+    "tr": "izin günü",
+    "de": "Urlaubstag"
+  },
+  {
+    "tr": "tatil günü",
+    "de": "Feiertag / freier Tag"
+  },
+  {
+    "tr": "mesai",
+    "de": "Arbeitszeit / Überstunden"
+  },
+  {
+    "tr": "fazla mesai",
+    "de": "Überstunden"
+  },
+  {
+    "tr": "iş görüşmesi",
+    "de": "Vorstellungsgespräch"
+  },
+  {
+    "tr": "özgeçmiş",
+    "de": "Lebenslauf"
+  },
+  {
+    "tr": "deneyim",
+    "de": "Erfahrung"
+  },
+  {
+    "tr": "meslek",
+    "de": "Beruf"
+  },
+  {
+    "tr": "görev",
+    "de": "Aufgabe / Pflicht"
+  },
+  {
+    "tr": "sorumluluk",
+    "de": "Verantwortung"
+  },
+  {
+    "tr": "toplantı",
+    "de": "Besprechung"
+  },
+  {
+    "tr": "sunum",
+    "de": "Präsentation"
+  },
+  {
+    "tr": "proje",
+    "de": "Projekt"
+  },
+  {
+    "tr": "hedef",
+    "de": "Ziel"
+  },
+  {
+    "tr": "plan",
+    "de": "Plan"
+  },
+  {
+    "tr": "takvim",
+    "de": "Kalender"
+  },
+  {
+    "tr": "liste",
+    "de": "Liste"
+  },
+  {
+    "tr": "not",
+    "de": "Notiz / Note"
+  },
+  {
+    "tr": "rapor",
+    "de": "Bericht"
+  },
+  {
+    "tr": "sözleşme",
+    "de": "Vertrag"
+  },
+  {
+    "tr": "anlaşma",
+    "de": "Vereinbarung"
+  },
+  {
+    "tr": "imzalamak",
+    "de": "unterschreiben"
+  },
+  {
+    "tr": "işten çıkmak",
+    "de": "die Arbeit verlassen / kündigen"
+  },
+  {
+    "tr": "işe başlamak",
+    "de": "mit der Arbeit anfangen"
+  },
+  {
+    "tr": "işe almak",
+    "de": "einstellen"
+  },
+  {
+    "tr": "işten çıkarmak",
+    "de": "entlassen"
+  },
+  {
+    "tr": "terfi",
+    "de": "Beförderung"
+  },
+  {
+    "tr": "iş arkadaşı",
+    "de": "Arbeitskollege"
+  },
+  {
+    "tr": "departman",
+    "de": "Abteilung"
+  },
+  {
+    "tr": "şirket",
+    "de": "Unternehmen"
+  },
+  {
+    "tr": "firma",
+    "de": "Firma"
+  },
+  {
+    "tr": "muhasebe",
+    "de": "Buchhaltung"
+  },
+  {
+    "tr": "yönetici",
+    "de": "Führungskraft"
+  },
+  {
+    "tr": "çalışan",
+    "de": "Mitarbeiter(in)"
+  },
+  {
+    "tr": "işveren",
+    "de": "Arbeitgeber"
+  },
+  {
+    "tr": "işçi",
+    "de": "Arbeiter(in)"
+  },
+  {
+    "tr": "mühendis",
+    "de": "Ingenieur(in)"
+  },
+  {
+    "tr": "avukat",
+    "de": "Rechtsanwalt / Rechtsanwältin"
+  },
+  {
+    "tr": "hakim",
+    "de": "Richter(in)"
+  },
+  {
+    "tr": "öğretim görevlisi",
+    "de": "Dozent(in)"
+  },
+  {
+    "tr": "mimar",
+    "de": "Architekt(in)"
+  },
+  {
+    "tr": "garsonluk",
+    "de": "Kellnertätigkeit"
+  },
+  {
+    "tr": "kuaför",
+    "de": "Friseur(in)"
+  },
+  {
+    "tr": "berber",
+    "de": "Barbier / Herrenfriseur"
+  },
+  {
+    "tr": "kasiyer",
+    "de": "Kassierer(in)"
+  },
+  {
+    "tr": "güvenlik",
+    "de": "Sicherheit / Sicherheitsdienst"
+  },
+  {
+    "tr": "itfaiyeci",
+    "de": "Feuerwehrmann / Feuerwehrfrau"
+  },
+  {
+    "tr": "çiftçi",
+    "de": "Landwirt(in)"
+  },
+  {
+    "tr": "terzi",
+    "de": "Schneider(in)"
+  },
+  {
+    "tr": "elektrikçi",
+    "de": "Elektriker(in)"
+  },
+  {
+    "tr": "tesisatçı",
+    "de": "Installateur(in)"
+  },
+  {
+    "tr": "boyacı",
+    "de": "Maler(in)"
+  },
+  {
+    "tr": "tamirhane",
+    "de": "Werkstatt"
+  },
+  {
+    "tr": "kargo",
+    "de": "Paketdienst / Fracht"
+  },
+  {
+    "tr": "paket",
+    "de": "Paket"
+  },
+  {
+    "tr": "teslimat",
+    "de": "Lieferung"
+  },
+  {
+    "tr": "kurye",
+    "de": "Kurier"
+  },
+  {
+    "tr": "sipariş",
+    "de": "Bestellung"
+  },
+  {
+    "tr": "sipariş vermek",
+    "de": "bestellen"
+  },
+  {
+    "tr": "iade",
+    "de": "Rückgabe"
+  },
+  {
+    "tr": "değişim",
+    "de": "Umtausch"
+  },
+  {
+    "tr": "garanti",
+    "de": "Garantie"
+  },
+  {
+    "tr": "fiş",
+    "de": "Kassenbon"
+  },
+  {
+    "tr": "makbuz",
+    "de": "Quittung"
+  },
+  {
+    "tr": "fiyat etiketi",
+    "de": "Preisschild"
+  },
+  {
+    "tr": "kasa",
+    "de": "Kasse"
+  },
+  {
+    "tr": "sıra",
+    "de": "Schlange / Reihenfolge"
+  },
+  {
+    "tr": "sıra beklemek",
+    "de": "anstehen"
+  },
+  {
+    "tr": "stok",
+    "de": "Lagerbestand"
+  },
+  {
+    "tr": "stokta",
+    "de": "var auf Lager"
+  },
+  {
+    "tr": "stokta yok",
+    "de": "nicht auf Lager"
+  },
+  {
+    "tr": "beden",
+    "de": "Konfektionsgröße"
+  },
+  {
+    "tr": "numara",
+    "de": "Größe / Nummer"
+  },
+  {
+    "tr": "denemek",
+    "de": "anprobieren / versuchen"
+  },
+  {
+    "tr": "deneme kabini",
+    "de": "Umkleidekabine"
+  },
+  {
+    "tr": "indirimli",
+    "de": "rabattiert"
+  },
+  {
+    "tr": "kalite",
+    "de": "Qualität"
+  },
+  {
+    "tr": "marka",
+    "de": "Marke"
+  },
+  {
+    "tr": "ürün",
+    "de": "Produkt"
+  },
+  {
+    "tr": "malzeme",
+    "de": "Material"
+  },
+  {
+    "tr": "pamuk",
+    "de": "Baumwolle"
+  },
+  {
+    "tr": "yün",
+    "de": "Wolle"
+  },
+  {
+    "tr": "deri",
+    "de": "Leder"
+  },
+  {
+    "tr": "plastik",
+    "de": "Kunststoff"
+  },
+  {
+    "tr": "metal",
+    "de": "Metall"
+  },
+  {
+    "tr": "ahşap",
+    "de": "Holz"
+  },
+  {
+    "tr": "cam",
+    "de": "Glas"
+  },
+  {
+    "tr": "kağıt",
+    "de": "Papier"
+  },
+  {
+    "tr": "karton",
+    "de": "Pappe"
+  },
+  {
+    "tr": "ölçü",
+    "de": "Maß"
+  },
+  {
+    "tr": "ağırlık",
+    "de": "Gewicht"
+  },
+  {
+    "tr": "uzunluk",
+    "de": "Länge"
+  },
+  {
+    "tr": "genişlik",
+    "de": "Breite"
+  },
+  {
+    "tr": "yükseklik",
+    "de": "Höhe"
+  },
+  {
+    "tr": "derinlik",
+    "de": "Tiefe"
+  },
+  {
+    "tr": "boyut",
+    "de": "Größe / Dimension"
+  },
+  {
+    "tr": "parça",
+    "de": "Teil / Stück"
+  },
+  {
+    "tr": "adet",
+    "de": "Stückzahl"
+  },
+  {
+    "tr": "miktar",
+    "de": "Menge"
+  },
+  {
+    "tr": "litre",
+    "de": "Liter"
+  },
+  {
+    "tr": "kilogram",
+    "de": "Kilogramm"
+  },
+  {
+    "tr": "gram",
+    "de": "Gramm"
+  },
+  {
+    "tr": "metre",
+    "de": "Meter"
+  },
+  {
+    "tr": "santimetre",
+    "de": "Zentimeter"
+  },
+  {
+    "tr": "kilometre",
+    "de": "Kilometer"
+  },
+  {
+    "tr": "metrekare",
+    "de": "Quadratmeter"
+  },
+  {
+    "tr": "yüzde",
+    "de": "Prozent"
+  },
+  {
+    "tr": "toplam",
+    "de": "Gesamtbetrag"
+  },
+  {
+    "tr": "tutar",
+    "de": "Betrag"
+  },
+  {
+    "tr": "vergi",
+    "de": "Steuer"
+  },
+  {
+    "tr": "KDV",
+    "de": "Mehrwertsteuer"
+  },
+  {
+    "tr": "borç",
+    "de": "Schuld"
+  },
+  {
+    "tr": "alacak",
+    "de": "Forderung / Guthaben"
+  },
+  {
+    "tr": "kredi",
+    "de": "Kredit"
+  },
+  {
+    "tr": "faiz",
+    "de": "Zinsen"
+  },
+  {
+    "tr": "taksit",
+    "de": "Ratenzahlung"
+  },
+  {
+    "tr": "banka hesabı",
+    "de": "Bankkonto"
+  },
+  {
+    "tr": "hesap numarası",
+    "de": "Kontonummer"
+  },
+  {
+    "tr": "havale",
+    "de": "Überweisung"
+  },
+  {
+    "tr": "para çekmek",
+    "de": "Geld abheben"
+  },
+  {
+    "tr": "para yatırmak",
+    "de": "Geld einzahlen"
+  },
+  {
+    "tr": "şifre",
+    "de": "Passwort / PIN"
+  },
+  {
+    "tr": "kullanıcı adı",
+    "de": "Benutzername"
+  },
+  {
+    "tr": "uygulama",
+    "de": "App / Anwendung"
+  },
+  {
+    "tr": "ekran",
+    "de": "Bildschirm"
+  },
+  {
+    "tr": "klavye",
+    "de": "Tastatur"
+  },
+  {
+    "tr": "fare",
+    "de": "Computermaus"
+  },
+  {
+    "tr": "yazıcı",
+    "de": "Drucker"
+  },
+  {
+    "tr": "dosya indirmek",
+    "de": "eine Datei herunterladen"
+  },
+  {
+    "tr": "yüklemek",
+    "de": "hochladen / installieren"
+  },
+  {
+    "tr": "bağlantı",
+    "de": "Verbindung / Link"
+  },
+  {
+    "tr": "kablosuz",
+    "de": "drahtlos"
+  },
+  {
+    "tr": "ağ",
+    "de": "Netzwerk"
+  },
+  {
+    "tr": "sinyal",
+    "de": "Signal"
+  },
+  {
+    "tr": "pil",
+    "de": "Batterie"
+  },
+  {
+    "tr": "batarya",
+    "de": "Akku"
+  },
+  {
+    "tr": "kulaklık",
+    "de": "Kopfhörer"
+  },
+  {
+    "tr": "hoparlör",
+    "de": "Lautsprecher"
+  },
+  {
+    "tr": "mikrofon",
+    "de": "Mikrofon"
+  },
+  {
+    "tr": "kamera",
+    "de": "Kamera"
+  },
+  {
+    "tr": "şarj etmek",
+    "de": "aufladen"
+  },
+  {
+    "tr": "bozulmak",
+    "de": "kaputtgehen"
+  },
+  {
+    "tr": "çalışmıyor",
+    "de": "funktioniert nicht"
+  },
+  {
+    "tr": "tamir etmek",
+    "de": "reparieren"
+  },
+  {
+    "tr": "güncelleme",
+    "de": "Update / Aktualisierung"
+  },
+  {
+    "tr": "ayar",
+    "de": "Einstellung"
+  },
+  {
+    "tr": "gizlilik",
+    "de": "Privatsphäre"
+  },
+  {
+    "tr": "güvenlik kodu",
+    "de": "Sicherheitscode"
+  },
+  {
+    "tr": "arama yapmak",
+    "de": "telefonieren / suchen"
+  },
+  {
+    "tr": "cevapsız çağrı",
+    "de": "verpasster Anruf"
+  },
+  {
+    "tr": "sesli mesaj",
+    "de": "Sprachnachricht"
+  },
+  {
+    "tr": "rehber",
+    "de": "Adressbuch"
+  },
+  {
+    "tr": "numara kaydetmek",
+    "de": "eine Nummer speichern"
+  },
+  {
+    "tr": "engellemek",
+    "de": "blockieren"
+  },
+  {
+    "tr": "paylaşmak",
+    "de": "teilen"
+  },
+  {
+    "tr": "silmek",
+    "de": "löschen"
+  },
+  {
+    "tr": "kopyalamak",
+    "de": "kopieren"
+  },
+  {
+    "tr": "yapıştırmak",
+    "de": "einfügen"
+  },
+  {
+    "tr": "kaydetmek",
+    "de": "speichern"
+  },
+  {
+    "tr": "yazılım",
+    "de": "Software"
+  },
+  {
+    "tr": "donanım",
+    "de": "Hardware"
+  },
+  {
+    "tr": "hafıza",
+    "de": "Speicher / Gedächtnis"
+  },
+  {
+    "tr": "bellek",
+    "de": "Arbeitsspeicher"
+  },
+  {
+    "tr": "internet sitesi",
+    "de": "Webseite"
+  },
+  {
+    "tr": "şifre sıfırlamak",
+    "de": "Passwort zurücksetzen"
+  },
+  {
+    "tr": "oysa / oysaki",
+    "de": "wohingegen / dabei"
+  },
+  {
+    "tr": "halbuki",
+    "de": "obwohl doch / dabei"
+  },
+  {
+    "tr": "meğer",
+    "de": "wie sich herausstellt"
+  },
+  {
+    "tr": "meğerse",
+    "de": "wie sich herausstellt / offenbar"
+  },
+  {
+    "tr": "madem",
+    "de": "wenn schon / da"
+  },
+  {
+    "tr": "mademki",
+    "de": "da ja / zumal"
+  },
+  {
+    "tr": "yoksa",
+    "de": "sonst / oder etwa"
+  },
+  {
+    "tr": "üstelik",
+    "de": "außerdem / obendrein"
+  },
+  {
+    "tr": "ayrıca",
+    "de": "außerdem"
+  },
+  {
+    "tr": "dahası",
+    "de": "mehr noch / darüber hinaus"
+  },
+  {
+    "tr": "hatta",
+    "de": "sogar"
+  },
+  {
+    "tr": "keza",
+    "de": "ebenso / gleichfalls"
+  },
+  {
+    "tr": "nitekim",
+    "de": "tatsächlich / wie sich zeigt"
+  },
+  {
+    "tr": "dolayısıyla",
+    "de": "folglich / daher"
+  },
+  {
+    "tr": "böylece",
+    "de": "somit / auf diese Weise"
+  },
+  {
+    "tr": "böylelikle",
+    "de": "dadurch / somit"
+  },
+  {
+    "tr": "sonuçta",
+    "de": "letztendlich"
+  },
+  {
+    "tr": "sonuç olarak",
+    "de": "infolgedessen / zusammenfassend"
+  },
+  {
+    "tr": "özetle",
+    "de": "kurz gesagt / zusammengefasst"
+  },
+  {
+    "tr": "kısacası",
+    "de": "kurzum"
+  },
+  {
+    "tr": "başka bir deyişle",
+    "de": "mit anderen Worten"
+  },
+  {
+    "tr": "demek ki",
+    "de": "das heißt also / demnach"
+  },
+  {
+    "tr": "bundan dolayı",
+    "de": "deshalb / aus diesem Grund"
+  },
+  {
+    "tr": "bu nedenle",
+    "de": "aus diesem Grund"
+  },
+  {
+    "tr": "bu sebeple",
+    "de": "aus diesem Grund"
+  },
+  {
+    "tr": "bu durumda",
+    "de": "in diesem Fall"
+  },
+  {
+    "tr": "aksi takdirde",
+    "de": "anderenfalls"
+  },
+  {
+    "tr": "bununla birlikte",
+    "de": "dennoch / zugleich"
+  },
+  {
+    "tr": "bununla beraber",
+    "de": "damit einhergehend"
+  },
+  {
+    "tr": "buna rağmen",
+    "de": "trotzdem"
+  },
+  {
+    "tr": "buna karşın",
+    "de": "demgegenüber / dennoch"
+  },
+  {
+    "tr": "öte yandan",
+    "de": "andererseits"
+  },
+  {
+    "tr": "diğer yandan",
+    "de": "auf der anderen Seite"
+  },
+  {
+    "tr": "bir yandan",
+    "de": "einerseits"
+  },
+  {
+    "tr": "öteki yandan",
+    "de": "andererseits"
+  },
+  {
+    "tr": "her ne kadar",
+    "de": "auch wenn"
+  },
+  {
+    "tr": "ne var ki",
+    "de": "allerdings"
+  },
+  {
+    "tr": "gelgelelim",
+    "de": "allerdings / nichtsdestotrotz"
+  },
+  {
+    "tr": "ancak o zaman",
+    "de": "erst dann"
+  },
+  {
+    "tr": "aksi hâlde",
+    "de": "andernfalls"
+  },
+  {
+    "tr": "ister",
+    "de": "sei es / ob"
+  },
+  {
+    "tr": "gerek",
+    "de": "sowohl / sei es"
+  },
+  {
+    "tr": "gerekirse",
+    "de": "falls nötig"
+  },
+  {
+    "tr": "bari",
+    "de": "wenigstens / doch wenigstens"
+  },
+  {
+    "tr": "hiç değilse",
+    "de": "wenigstens"
+  },
+  {
+    "tr": "en azından",
+    "de": "zumindest"
+  },
+  {
+    "tr": "hele",
+    "de": "erst recht / besonders"
+  },
+  {
+    "tr": "hele ki",
+    "de": "insbesondere wenn"
+  },
+  {
+    "tr": "bilhassa",
+    "de": "insbesondere"
+  },
+  {
+    "tr": "özellikle de",
+    "de": "insbesondere auch"
+  },
+  {
+    "tr": "mesela",
+    "de": "zum Beispiel"
+  },
+  {
+    "tr": "örneğin",
+    "de": "beispielsweise"
+  },
+  {
+    "tr": "söz gelimi",
+    "de": "beispielsweise"
+  },
+  {
+    "tr": "farz edelim",
+    "de": "angenommen"
+  },
+  {
+    "tr": "varsayalım",
+    "de": "nehmen wir an"
+  },
+  {
+    "tr": "diyelim",
+    "de": "sagen wir"
+  },
+  {
+    "tr": "diyelim ki",
+    "de": "angenommen, dass"
+  },
+  {
+    "tr": "tut ki",
+    "de": "angenommen"
+  },
+  {
+    "tr": "bir bakıma",
+    "de": "gewissermaßen"
+  },
+  {
+    "tr": "bir anlamda",
+    "de": "in gewisser Hinsicht"
+  },
+  {
+    "tr": "açıkçası",
+    "de": "offen gesagt"
+  },
+  {
+    "tr": "doğrusu",
+    "de": "ehrlich gesagt / eigentlich"
+  },
+  {
+    "tr": "dürüst olmak gerekirse",
+    "de": "ehrlich gesagt"
+  },
+  {
+    "tr": "işin doğrusu",
+    "de": "um ehrlich zu sein"
+  },
+  {
+    "tr": "ne yazık ki / maalesef",
+    "de": "leider"
+  },
+  {
+    "tr": "neyse",
+    "de": "wie auch immer / egal"
+  },
+  {
+    "tr": "her neyse",
+    "de": "jedenfalls / wie auch immer"
+  },
+  {
+    "tr": "neyse ki / iyi ki",
+    "de": "zum Glück"
+  },
+  {
+    "tr": "şükür ki / çok şükür",
+    "de": "Gott sei Dank"
+  },
+  {
+    "tr": "Allah korusun",
+    "de": "Gott bewahre"
+  },
+  {
+    "tr": "inşallah",
+    "de": "hoffentlich / so Gott will"
+  },
+  {
+    "tr": "maşallah",
+    "de": "wie schön / Gott behüte"
+  },
+  {
+    "tr": "vallahi",
+    "de": "ich schwöre / wirklich"
+  },
+  {
+    "tr": "billahi",
+    "de": "ich schwöre bei Gott"
+  },
+  {
+    "tr": "güya / sözde",
+    "de": "angeblich"
+  },
+  {
+    "tr": "sanki",
+    "de": "als ob"
+  },
+  {
+    "tr": "adeta",
+    "de": "geradezu"
+  },
+  {
+    "tr": "neredeyse hiç",
+    "de": "fast gar nicht"
+  },
+  {
+    "tr": "az kalsın",
+    "de": "beinahe"
+  },
+  {
+    "tr": "hemen hemen",
+    "de": "beinahe / ungefähr"
+  },
+  {
+    "tr": "aşağı yukarı",
+    "de": "ungefähr"
+  },
+  {
+    "tr": "kabaca",
+    "de": "grob / ungefähr"
+  },
+  {
+    "tr": "yaklaşık olarak",
+    "de": "ungefähr"
+  },
+  {
+    "tr": "tam tersine",
+    "de": "ganz im Gegenteil"
+  },
+  {
+    "tr": "aksine",
+    "de": "im Gegenteil"
+  },
+  {
+    "tr": "bilakis",
+    "de": "im Gegenteil"
+  },
+  {
+    "tr": "tersine",
+    "de": "umgekehrt"
+  },
+  {
+    "tr": "öyleyse",
+    "de": "also / wenn dem so ist"
+  },
+  {
+    "tr": "madem öyle",
+    "de": "wenn das so ist"
+  },
+  {
+    "tr": "peki",
+    "de": "also gut / nun"
+  },
+  {
+    "tr": "hadi bakalım",
+    "de": "na dann / los geht's"
+  },
+  {
+    "tr": "bakalım",
+    "de": "mal sehen"
+  },
+  {
+    "tr": "dur bakalım",
+    "de": "warte mal"
+  },
+  {
+    "tr": "bir dakika",
+    "de": "einen Moment"
+  },
+  {
+    "tr": "şöylece",
+    "de": "auf diese Weise / einfach so"
+  },
+  {
+    "tr": "böylesine",
+    "de": "dermaßen / so sehr"
+  },
+  {
+    "tr": "öylesine",
+    "de": "grundlos / einfach so"
+  },
+  {
+    "tr": "şöyle ki",
+    "de": "und zwar so"
+  },
+  {
+    "tr": "şu hâlde",
+    "de": "folglich / demnach"
+  },
+  {
+    "tr": "o hâlde",
+    "de": "also / in diesem Fall"
+  },
+  {
+    "tr": "madem öyleyse",
+    "de": "wenn es also so ist"
+  },
+  {
+    "tr": "hani",
+    "de": "weißt du / eigentlich"
+  },
+  {
+    "tr": "işte",
+    "de": "eben / da hast du es"
+  },
+  {
+    "tr": "şey",
+    "de": "Ding / ähm"
+  },
+  {
+    "tr": "falan",
+    "de": "oder so / und so"
+  },
+  {
+    "tr": "filan",
+    "de": "oder so / und dergleichen"
+  },
+  {
+    "tr": "falan filan",
+    "de": "dies und das"
+  },
+  {
+    "tr": "ıvır zıvır",
+    "de": "Kleinkram / dies und das"
+  },
+  {
+    "tr": "neyse işte",
+    "de": "na ja, jedenfalls"
+  },
+  {
+    "tr": "aman",
+    "de": "ach / bloß"
+  },
+  {
+    "tr": "aman ha",
+    "de": "pass bloß auf"
+  },
+  {
+    "tr": "aman dikkat",
+    "de": "Vorsicht"
+  },
+  {
+    "tr": "hay Allah",
+    "de": "ach du meine Güte"
+  },
+  {
+    "tr": "Allah Allah",
+    "de": "na so was / wirklich?"
+  },
+  {
+    "tr": "vay be",
+    "de": "wow / nicht schlecht"
+  },
+  {
+    "tr": "vah vah",
+    "de": "ach je"
+  },
+  {
+    "tr": "tüh",
+    "de": "Mist / schade"
+  },
+  {
+    "tr": "of",
+    "de": "uff / ach"
+  },
+  {
+    "tr": "oh",
+    "de": "oh"
+  },
+  {
+    "tr": "eh",
+    "de": "nun ja"
+  },
+  {
+    "tr": "ha",
+    "de": "aha / ja?"
+  },
+  {
+    "tr": "aha",
+    "de": "aha"
+  },
+  {
+    "tr": "hah",
+    "de": "ha! / siehst du"
+  },
+  {
+    "tr": "aynen",
+    "de": "genau / stimmt"
+  },
+  {
+    "tr": "kesin",
+    "de": "definitiv"
+  },
+  {
+    "tr": "bence",
+    "de": "meiner Meinung nach"
+  },
+  {
+    "tr": "sence",
+    "de": "deiner Meinung nach"
+  },
+  {
+    "tr": "ona göre",
+    "de": "seiner / ihrer Meinung nach"
+  },
+  {
+    "tr": "bana kalırsa",
+    "de": "wenn es nach mir geht"
+  },
+  {
+    "tr": "kanımca",
+    "de": "meiner Ansicht nach"
+  },
+  {
+    "tr": "zannımca",
+    "de": "meiner Vermutung nach"
+  },
+  {
+    "tr": "sanırım",
+    "de": "ich glaube / vermutlich"
+  },
+  {
+    "tr": "galiba",
+    "de": "anscheinend / wohl"
+  },
+  {
+    "tr": "herhalde",
+    "de": "wahrscheinlich"
+  },
+  {
+    "tr": "muhtemelen",
+    "de": "vermutlich"
+  },
+  {
+    "tr": "kuşkusuz",
+    "de": "zweifellos"
+  },
+  {
+    "tr": "şüphesiz",
+    "de": "zweifellos"
+  },
+  {
+    "tr": "pekâlâ",
+    "de": "sehr wohl / nun gut"
+  },
+  {
+    "tr": "sahi",
+    "de": "übrigens / tatsächlich"
+  },
+  {
+    "tr": "sahi mi",
+    "de": "wirklich?"
+  },
+  {
+    "tr": "ne de olsa",
+    "de": "schließlich / immerhin"
+  },
+  {
+    "tr": "nasılsa",
+    "de": "ohnehin / irgendwie"
+  },
+  {
+    "tr": "bir şekilde",
+    "de": "irgendwie"
+  },
+  {
+    "tr": "her hâlükârda",
+    "de": "auf jeden Fall"
+  },
+  {
+    "tr": "her durumda",
+    "de": "in jedem Fall"
+  },
+  {
+    "tr": "hiç olmazsa",
+    "de": "wenigstens"
+  },
+  {
+    "tr": "olur ya",
+    "de": "man weiß ja nie"
+  },
+  {
+    "tr": "kim bilir",
+    "de": "wer weiß"
+  },
+  {
+    "tr": "Allah bilir",
+    "de": "Gott weiß"
+  },
+  {
+    "tr": "ne bileyim",
+    "de": "woher soll ich wissen / keine Ahnung"
+  },
+  {
+    "tr": "anladın mı",
+    "de": "verstehst du?"
+  },
+  {
+    "tr": "anlaşıldı",
+    "de": "verstanden"
+  },
+  {
+    "tr": "anlaşılan",
+    "de": "offenbar"
+  },
+  {
+    "tr": "anlaşıldığı üzere",
+    "de": "wie sich verstehen lässt"
+  },
+  {
+    "tr": "lafın kısası",
+    "de": "kurz gesagt"
+  },
+  {
+    "tr": "laf aramızda",
+    "de": "unter uns gesagt"
+  },
+  {
+    "tr": "araya girmek gerekirse",
+    "de": "wenn ich kurz unterbrechen darf"
+  },
+  {
+    "tr": "bu arada",
+    "de": "übrigens"
+  },
+  {
+    "tr": "yeri gelmişken",
+    "de": "wo wir gerade dabei sind"
+  },
+  {
+    "tr": "konuya dönersek",
+    "de": "zurück zum Thema"
+  },
+  {
+    "tr": "her şeyden önce",
+    "de": "vor allem"
+  },
+  {
+    "tr": "ilk olarak",
+    "de": "erstens"
+  },
+  {
+    "tr": "öncelikle",
+    "de": "zunächst"
+  },
+  {
+    "tr": "son olarak",
+    "de": "zuletzt"
+  },
+  {
+    "tr": "nihayet",
+    "de": "endlich"
+  },
+  {
+    "tr": "nihayetinde",
+    "de": "letztendlich"
+  },
+  {
+    "tr": "en sonunda",
+    "de": "schließlich"
+  },
+  {
+    "tr": "başlangıçta",
+    "de": "anfangs"
+  },
+  {
+    "tr": "zamanla",
+    "de": "mit der Zeit"
+  },
+  {
+    "tr": "giderek",
+    "de": "zunehmend"
+  },
+  {
+    "tr": "gitgide",
+    "de": "nach und nach"
+  },
+  {
+    "tr": "derken",
+    "de": "und dann / plötzlich"
+  },
+  {
+    "tr": "ardından",
+    "de": "danach"
+  },
+  {
+    "tr": "aynı zamanda",
+    "de": "zugleich"
+  },
+  {
+    "tr": "bu sırada",
+    "de": "in der Zwischenzeit"
+  },
+  {
+    "tr": "o sırada",
+    "de": "zu diesem Zeitpunkt"
+  },
+  {
+    "tr": "bir süre sonra",
+    "de": "nach einer Weile"
+  },
+  {
+    "tr": "çok geçmeden",
+    "de": "nicht lange danach"
+  },
+  {
+    "tr": "öncesinde",
+    "de": "zuvor"
+  },
+  {
+    "tr": "sonrasında",
+    "de": "danach"
+  },
+  {
+    "tr": "şimdiden",
+    "de": "schon jetzt"
+  },
+  {
+    "tr": "şu anda",
+    "de": "gerade jetzt"
+  },
+  {
+    "tr": "birazdan",
+    "de": "gleich / in Kürze"
+  },
+  {
+    "tr": "az önce",
+    "de": "gerade eben"
+  },
+  {
+    "tr": "demin",
+    "de": "soeben"
+  },
+  {
+    "tr": "henüz değil",
+    "de": "noch nicht"
+  },
+  {
+    "tr": "çoktan",
+    "de": "schon längst"
+  },
+  {
+    "tr": "art arda",
+    "de": "hintereinander"
+  },
+  {
+    "tr": "peş peşe",
+    "de": "nacheinander"
+  },
+  {
+    "tr": "sırasıyla",
+    "de": "der Reihe nach"
+  },
+  {
+    "tr": "rastgele",
+    "de": "zufällig"
+  },
+  {
+    "tr": "bilerek",
+    "de": "absichtlich"
+  },
+  {
+    "tr": "isteyerek",
+    "de": "bewusst / freiwillig"
+  },
+  {
+    "tr": "istemeden",
+    "de": "unabsichtlich"
+  },
+  {
+    "tr": "kazara",
+    "de": "versehentlich"
+  },
+  {
+    "tr": "tesadüfen",
+    "de": "zufällig"
+  },
+  {
+    "tr": "genel olarak",
+    "de": "allgemein"
+  },
+  {
+    "tr": "kabaca söylemek gerekirse",
+    "de": "grob gesagt"
+  },
+  {
+    "tr": "tam olarak",
+    "de": "genau"
+  },
+  {
+    "tr": "kesin olarak",
+    "de": "sicher / definitiv"
+  },
+  {
+    "tr": "muhtemel olarak",
+    "de": "wahrscheinlich"
+  },
+  {
+    "tr": "kısmen",
+    "de": "teilweise"
+  },
+  {
+    "tr": "tamamen değil",
+    "de": "nicht vollständig"
+  },
+  {
+    "tr": "çoğunlukla",
+    "de": "meistens"
+  },
+  {
+    "tr": "büyük ölçüde",
+    "de": "weitgehend"
+  },
+  {
+    "tr": "bir ölçüde",
+    "de": "bis zu einem gewissen Grad"
+  },
+  {
+    "tr": "az çok",
+    "de": "mehr oder weniger"
+  },
+  {
+    "tr": "ne olursa olsun",
+    "de": "egal was passiert"
+  },
+  {
+    "tr": "her şeye rağmen",
+    "de": "trotz allem"
+  },
+  {
+    "tr": "ek olarak",
+    "de": "zusätzlich"
+  },
+  {
+    "tr": "bunun aksine",
+    "de": "im Gegensatz dazu"
+  },
+  {
+    "tr": "bunun yerine",
+    "de": "anstelle dessen"
+  },
+  {
+    "tr": "yerine",
+    "de": "anstelle"
+  },
+  {
+    "tr": "hariç",
+    "de": "außer"
+  }
+]
