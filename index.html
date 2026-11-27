@@ -73,7 +73,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid #c64b4540;border-color
 <div class="hero-copy"><div class="eyebrow">Türkçe · Deutsch · Persönlicher Lernbereich</div><h1>Türkisch<br>Vokabeltrainer</h1><p>Ne mutlu Türküm diyene!</p><div class="hero-sign">Mustafa Kemal Atatürk</div></div>
 <div class="flag-mark" aria-hidden="true">☾<br><span style="font-size:48px">★</span></div>
 </div></header>
-<main>
+<main><div class="panel"><div class="row"><strong class="grow">GitHub-Lernstand</strong><button class="btn" id="syncConnect">GitHub verbinden</button><button class="btn" id="syncRetry">Jetzt synchronisieren</button></div><p id="syncStatus" class="small" role="status">Online-Lernstand wird geprüft …</p></div>
 <nav class="nav"><button data-tab="home" class="active">Übersicht</button><button data-tab="learn">Lernen</button><button data-tab="words">Wortliste</button><button data-tab="add">+ Wort hinzufügen</button><button data-tab="stats">Statistiken</button><span class="spacer"></span><button id="export">Sicherung exportieren</button><button id="import">Importieren</button><input id="file" type="file" accept="application/json" hidden></nav>
 <section id="home">
 <div class="stats">
@@ -97,9 +97,9 @@ input:focus,select:focus,textarea:focus{outline:3px solid #c64b4540;border-color
 </div><div class="panel"><h2>Aktivität der letzten 7 Tage</h2><div id="week" class="week"></div><div id="weekLabels" class="row" style="justify-content:space-around"></div></div>
 <div class="panel"><h2>Dein Lernstand</h2><div id="stages"></div></div>
 <div class="panel"><h2>Schwierigste Wörter</h2><div class="tablewrap"><table><thead><tr><th>Türkisch</th><th>Deutsch</th><th>Falsch</th><th>Richtig</th></tr></thead><tbody id="hardest"></tbody></table></div></div>
-<div class="panel"><h2>Deine Lernziele</h2><p id="goalProgress"></p><p class="muted small">Die Statistiken werden lokal in diesem Browser berechnet. Beim Löschen der Browserdaten kann der Lernstand verloren gehen – exportiere deshalb gelegentlich eine Sicherung.</p></div>
+<div class="panel"><h2>Deine Lernziele</h2><p id="goalProgress"></p><p class="muted small">Die Statistiken werden aus deinem Lernstand berechnet. Verbinde GitHub für eine dauerhafte Online-Sicherung.</p></div>
 </section>
-<p class="foot">Türkisch-Vokabeltrainer · Lernstand bleibt auf deinem Gerät · Open Source</p>
+<p class="foot">Türkisch-Vokabeltrainer · GitHub-Synchronisierung verfügbar · Open Source</p>
 </main>
 <script>
 const $=id=>document.getElementById(id),PROGRESS_KEY="tr-vocab-progress-v1",CUSTOM_KEY="tr-vocab-custom-v1",EVENT_KEY="tr-vocab-events-v1",DIRECTION_KEY="tr-vocab-direction-v1";
@@ -108,7 +108,47 @@ const today=()=>new Date().toLocaleDateString("sv-SE"),plus=(n)=>{let d=new Date
 function p(i){return progress[i]||{box:0,correct:0,wrong:0,due:"",last:"",seen:0}}
 function due(i){return !p(i).due||p(i).due<=today()}
 function status(x){return x.box>=5?"Sicher":x.seen?"In Arbeit":"Neu"}
-function save(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));localStorage.setItem(CUSTOM_KEY,JSON.stringify(customWords));localStorage.setItem(EVENT_KEY,JSON.stringify(events))}
+function saveLocal(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));localStorage.setItem(CUSTOM_KEY,JSON.stringify(customWords));localStorage.setItem(EVENT_KEY,JSON.stringify(events))}
+function save(){saveLocal();queueSync()}
+const syncUrl="https://api.github.com/repos/johannsi19/tuerkisch-vokabeltrainer/contents/data/lernstand.json";
+let syncToken=sessionStorage.getItem("tr-github-token")||"",syncSha=null,syncReady=false,syncBusy=false,syncDirty=false,syncTimer;
+const syncStatus=s=>$("syncStatus").textContent=s;
+function snapshot(){return {version:2,progress,customWords,events,direction:$("direction").value}}
+function encode(s){return btoa(Array.from(new TextEncoder().encode(s),b=>String.fromCharCode(b)).join(""))}
+function decode(s){return new TextDecoder().decode(Uint8Array.from(atob(s),c=>c.charCodeAt(0)))}
+function headers(){return {Accept:"application/vnd.github+json",...(syncToken?{Authorization:"Bearer "+syncToken}:{})}}
+async function readRemote(){
+ const r=await fetch(syncUrl,{headers:headers(),cache:"no-store"});
+ if(r.status===404){syncSha=null;return null}
+ if(!r.ok)throw Error("GitHub HTTP "+r.status);
+ const j=await r.json();const d=JSON.parse(decode(j.content));
+ if(!d.progress||!Array.isArray(d.customWords)||!Array.isArray(d.events))throw Error("Ungültiger Online-Lernstand");
+ syncSha=j.sha;return d;
+}
+async function initSync(){
+ syncReady=false;
+ try{const d=await readRemote();
+ if(d){const local=snapshot();const hasLocal=Object.keys(progress).length||events.length||customWords.length;
+ const same=JSON.stringify(local.progress)===JSON.stringify(d.progress)&&JSON.stringify(local.events)===JSON.stringify(d.events)&&JSON.stringify(local.customWords)===JSON.stringify(d.customWords);
+ if(hasLocal&&!same){if(!confirm("Lokaler und Online-Lernstand unterscheiden sich. OK: Online-Lernstand laden. Abbrechen: lokalen Stand behalten (keine automatische Überschreibung).")){syncStatus("Synchronisierung pausiert: unterschiedliche Lernstände. Exportiere den lokalen Stand vor einem erneuten Versuch.");return}}
+ progress=d.progress;customWords=d.customWords;events=d.events;if(["tr-de","de-tr","random"].includes(d.direction)){$("direction").value=d.direction;localStorage.setItem(DIRECTION_KEY,d.direction)}saveLocal();rebuild();render();next();}
+ syncReady=true;syncStatus(syncToken?"GitHub verbunden.":"Online-Lernstand geladen bzw. geprüft. Zum automatischen Speichern GitHub verbinden.");
+ if(!d&&syncToken)queueSync();
+ }catch(e){syncStatus("Online-Lernstand konnte nicht geprüft werden: "+e.message)}
+}
+function queueSync(){syncDirty=true;if(!syncReady||!syncToken){syncStatus("Nur lokal gespeichert – GitHub verbinden bzw. Synchronisierung erneut prüfen.");return}clearTimeout(syncTimer);syncTimer=setTimeout(writeRemote,400)}
+async function writeRemote(){
+ if(syncBusy||!syncReady||!syncToken||!syncDirty)return;
+ syncBusy=true;syncDirty=false;syncStatus("Speichere auf GitHub …");
+ try{const body={message:"Lernstand aktualisieren",content:encode(JSON.stringify(snapshot())),...(syncSha?{sha:syncSha}:{})};
+ const r=await fetch(syncUrl,{method:"PUT",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
+ if(!r.ok)throw Error("HTTP "+r.status+" – Berechtigung oder zwischenzeitliche Änderung prüfen");
+ const j=await r.json();syncSha=j.content.sha;syncStatus("Auf GitHub gespeichert: "+new Date().toLocaleTimeString("de-DE"));
+ }catch(e){syncDirty=true;syncReady=false;syncStatus("Nicht online gespeichert: "+e.message+" – lokaler Stand bleibt erhalten.")}
+ finally{syncBusy=false;if(syncDirty&&syncReady)queueSync()}
+}
+$("syncConnect").onclick=async()=>{const t=prompt("GitHub Fine-grained Personal Access Token (nur dieses Repository, Contents: Read and write). Der Schlüssel bleibt in dieser Browsersitzung.");if(!t)return;syncToken=t.trim();sessionStorage.setItem("tr-github-token",syncToken);await initSync();if(syncReady&&syncDirty)queueSync()};
+$("syncRetry").onclick=async()=>{if(!syncReady)await initSync();if(syncReady&&syncToken){syncDirty=true;await writeRemote()}};
 function rebuild(){words=baseWords.concat(customWords)}
 function pool(){let a=words.map((_,i)=>i),f=$("filter").value;if(f==="due")a=a.filter(i=>due(i)||!p(i).seen);if(f==="new")a=a.filter(i=>!p(i).seen);if(f==="weak")a=a.filter(i=>p(i).wrong>p(i).correct||p(i).box<=1);return a.length?a:words.map((_,i)=>i)}
 function next(){if(!words.length)return;let a=pool().filter(i=>i!==current);if(!a.length)a=pool();current=a[Math.floor(Math.random()*a.length)];revealed=false;let dir=$("direction").value==="random"?(Math.random()<.5?"tr-de":"de-tr"): $("direction").value;currentDirection=dir;$("prompt").textContent=dir==="tr-de"?words[current].tr:words[current].de;$("answer").textContent="";$("reveal").classList.remove("hide");$("rate").classList.add("hide");$("directionLabel").textContent=$("direction").value==="random"?"Zufällig gemischt":dir==="tr-de"?"Türkisch → Deutsch":"Deutsch → Türkisch";$("session").textContent=session+" Karten in dieser Sitzung"}
@@ -123,7 +163,7 @@ function renderHardest(){let arr=words.map((w,i)=>({w,x:p(i)})).filter(o=>o.x.wr
 function renderWords(){if(!words.length)return;let q=$("search").value.toLocaleLowerCase("de"),f=$("wordFilter").value,arr=[];words.forEach((w,i)=>{let x=p(i),s=status(x);if(q&&!w.tr.toLocaleLowerCase().includes(q)&&!w.de.toLocaleLowerCase().includes(q))return;if(f==="new"&&x.seen)return;if(f==="learning"&&(!x.seen||x.box>=5))return;if(f==="known"&&x.box<5)return;arr.push("<tr><td>"+esc(w.tr)+"</td><td>"+esc(w.de)+"</td><td>"+s+"</td></tr>")});$("rows").innerHTML=arr.join("");$("count").textContent=arr.length+" Treffer"}
 function endSession(){lastSession=session;current=-1;revealed=false;tab("home");render();$("homeSummary").textContent+=" · Letzte Sitzung: "+lastSession+" Karten."}
 function tab(name){["home","learn","words","add","stats"].forEach(x=>$(x).classList.toggle("hide",x!==name));document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b.dataset.tab===name));if(name==="words")renderWords();if(name==="stats")render()}
-document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>tab(b.dataset.tab));$("start").onclick=()=>{session=0;tab("learn");next()};$("next").onclick=next;$("endSession").onclick=endSession;$("show").onclick=show;$("right").onclick=()=>rate(true);$("again").onclick=()=>rate(false);$("direction").value=localStorage.getItem(DIRECTION_KEY)||"tr-de";$("direction").onchange=()=>{localStorage.setItem(DIRECTION_KEY,$("direction").value);next()};$("filter").onchange=next;$("search").oninput=renderWords;$("wordFilter").onchange=renderWords;
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>tab(b.dataset.tab));$("start").onclick=()=>{session=0;tab("learn");next()};$("next").onclick=next;$("endSession").onclick=endSession;$("show").onclick=show;$("right").onclick=()=>rate(true);$("again").onclick=()=>rate(false);$("direction").value=localStorage.getItem(DIRECTION_KEY)||"tr-de";$("direction").onchange=()=>{localStorage.setItem(DIRECTION_KEY,$("direction").value);queueSync();next()};$("filter").onchange=next;$("search").oninput=renderWords;$("wordFilter").onchange=renderWords;
 $("addForm").onsubmit=e=>{e.preventDefault();let tr=$("newTr").value.trim(),de=$("newDe").value.trim();if(!tr||!de)return;if(words.some(w=>w.tr.toLocaleLowerCase()===tr.toLocaleLowerCase()&&w.de.toLocaleLowerCase()===de.toLocaleLowerCase())){$("addMessage").textContent="Dieses Wortpaar gibt es bereits.";$("addMessage").className="small danger";return}customWords.push({tr,de});rebuild();save();render();$("addForm").reset();$("addMessage").textContent="Gespeichert! Das Wort ist jetzt in deiner Wortliste.";$("addMessage").className="small success"};
 $("export").onclick=()=>{let a=document.createElement("a"),u=URL.createObjectURL(new Blob([JSON.stringify({version:2,progress,customWords,events},null,2)],{type:"application/json"}));a.href=u;a.download="tuerkisch-lernstand.json";a.click();URL.revokeObjectURL(u)};$("import").onclick=()=>$("file").click();$("file").onchange=e=>{let file=e.target.files[0];if(!file)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);progress=d.progress||{};customWords=d.customWords||[];events=d.events||[];rebuild();save();render();alert("Sicherung geladen.")}catch{alert("Ungültige Sicherungsdatei.")}};r.readAsText(file)};
 async function load(){
@@ -144,7 +184,7 @@ async function load(){
   progress=JSON.parse(localStorage.getItem(PROGRESS_KEY)||"{}");
   customWords=JSON.parse(localStorage.getItem(CUSTOM_KEY)||"[]");
   events=JSON.parse(localStorage.getItem(EVENT_KEY)||"[]");
-  rebuild();render();next();
+  rebuild();render();next();await initSync();
   let incomplete=baseWords.filter(w=>!w.tr||!w.de).length;
   if(incomplete){$("dataWarning").textContent=incomplete+" Eintrag(e) sind unvollständig.";$("dataWarning").classList.remove("hide")}
  }catch(e){
