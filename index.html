@@ -67,7 +67,7 @@ main{max-width:1280px}
 #prompt{letter-spacing:.01em}
 input:focus,select:focus,textarea:focus{outline:3px solid #c64b4540;border-color:#ad202a}
 @media(max-width:760px){.hero{grid-template-columns:104px 1fr;gap:14px}.ataturk-photo{width:104px;height:132px;border-width:3px;border-radius:42% 42% 12px 12px}.hero-copy{padding:4px 0}.hero-sign{font-size:16px}.panel{padding:18px}.nav{position:static}}
-</style></head><body>
+</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"><meta name="theme-color" content="#991b25"><meta name="apple-mobile-web-app-capable" content="yes"></head><body>
 <header><div class="hero">
 <img class="ataturk-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kemal_Atat%C3%BCrk%20portrait.jpg?width=600" alt="Historisches Porträt von Mustafa Kemal Atatürk" loading="eager">
 <div class="hero-copy"><div class="eyebrow">Türkçe · Deutsch · Persönlicher Lernbereich</div><h1>Türkisch<br>Vokabeltrainer</h1><p>Ne mutlu Türküm diyene!</p><div class="hero-sign">Mustafa Kemal Atatürk</div></div>
@@ -105,7 +105,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid #c64b4540;border-color
 const $=id=>document.getElementById(id),PROGRESS_KEY="tr-vocab-progress-v1",CUSTOM_KEY="tr-vocab-custom-v1",EVENT_KEY="tr-vocab-events-v1",DIRECTION_KEY="tr-vocab-direction-v1";
 let baseWords=[],customWords=[],words=[],progress={},events=[],current=-1,revealed=false,session=0,lastSession=0,currentDirection="tr-de";
 const today=()=>new Date().toLocaleDateString("sv-SE"),plus=(n)=>{let d=new Date();d.setDate(d.getDate()+n);return d.toLocaleDateString("sv-SE")};
-function p(i){return progress[i]||{box:0,correct:0,wrong:0,due:"",last:"",seen:0}}
+function p(i){return progress[words[i]?.id]||{box:0,correct:0,wrong:0,due:"",last:"",seen:0}}
 function due(i){return !p(i).due||p(i).due<=today()}
 function status(x){return x.box>=5?"Sicher":x.seen?"In Arbeit":"Neu"}
 function saveLocal(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));localStorage.setItem(CUSTOM_KEY,JSON.stringify(customWords));localStorage.setItem(EVENT_KEY,JSON.stringify(events))}
@@ -113,11 +113,21 @@ function save(){saveLocal();queueSync()}
 const cloud=window.supabase?.createClient("https://gosuithwumgzuraciqcw.supabase.co","sb_publishable_UcvpU-jBtpdiGzevBp-veA_uMNPf9OA");
 let syncBusy=false,syncDirty=false,syncTimer,cloudUser=null;
 const syncStatus=s=>$("syncStatus").textContent=s;
-function snapshot(){return {version:2,progress,customWords,events,direction:$("direction").value}}
+function snapshot(){return {version:3,progress,customWords,events,direction:$("direction").value}}
 // Merge reviews by unique event ID; older reviews use occurrence-aware IDs.
+let legacyBase=[];
+const customId=w=>"custom:"+JSON.stringify([w.tr.trim().toLocaleLowerCase("tr"),w.de.trim().toLocaleLowerCase("de")]);
+function migrate(s){
+ const custom=(s.customWords||[]).map(w=>({...w,id:w.id||customId(w)}));
+ const source=legacyBase.concat(custom);
+ const resolve=k=>/^\d+$/.test(String(k))?source[Number(k)]?.id:k;
+ const p={};for(const [k,v] of Object.entries(s.progress||{})){const id=resolve(k);if(id)p[id]=v}
+ return {...s,version:3,customWords:custom,progress:p,events:(s.events||[]).map(e=>({...e,wordId:e.wordId||resolve(e.index)})).filter(e=>e.wordId).map(({index,...e})=>e)};
+}
 function mergeStates(remote){
- const local=snapshot(), oldWord=words[current];
- const key=w=>JSON.stringify([w.tr.trim().toLocaleLowerCase("tr"),w.de.trim().toLocaleLowerCase("de")]);
+ remote=migrate(remote);
+ const local=migrate(snapshot()), oldWord=words[current];
+ const key=w=>w.id;
  const combined=[], lookup=new Map(baseWords.map((w,i)=>[key(w),i]));
  for(const w of [...remote.customWords,...local.customWords])if(!lookup.has(key(w))){lookup.set(key(w),baseWords.length+combined.length);combined.push(w)}
  const merged={}, all=new Map();
@@ -125,23 +135,23 @@ function mergeStates(remote){
   const source=baseWords.concat(state.customWords), counts=new Map();
   const mapIndex=i=>source[i]?lookup.get(key(source[i])):undefined;
   for(const [i,p] of Object.entries(state.progress)){
-   const j=mapIndex(i);if(j===undefined)continue;
+   const j=i;
    const prev=merged[j];if(!prev)merged[j]={...p};else{
     const latest=(p.last||"")>(prev.last||"")?p:prev;
     merged[j]={...latest,correct:Math.max(prev.correct||0,p.correct||0),wrong:Math.max(prev.wrong||0,p.wrong||0),seen:Math.max(prev.seen||0,p.seen||0)};
    }
   }
   for(const e of state.events){
-   const j=mapIndex(e.index);if(j===undefined)continue;
-   const sig=JSON.stringify([key(source[e.index]),e.date,!!e.ok]);
+   const j=e.wordId;if(!j)continue;
+   const sig=JSON.stringify([j,e.date,!!e.ok]);
    const n=(counts.get(sig)||0)+1;counts.set(sig,n);
    const id=e.id||"legacy:"+sig+":"+n;
-   if(!all.has(id))all.set(id,{...e,id,index:j});
+   if(!all.has(id))all.set(id,{...e,id,wordId:j});
   }
  }
  const combinedEvents=[...all.values()].sort((a,b)=>(a.at||a.date).localeCompare(b.at||b.date)||a.id.localeCompare(b.id));
  const byIndex=new Map();
- for(const e of combinedEvents){if(!byIndex.has(e.index))byIndex.set(e.index,[]);byIndex.get(e.index).push(e)}
+ for(const e of combinedEvents){if(!byIndex.has(e.wordId))byIndex.set(e.wordId,[]);byIndex.get(e.wordId).push(e)}
  for(const [i,es] of byIndex){
   let box=0,correct=0,wrong=0,last="",due="";
   for(const e of es){last=e.date;if(e.ok){correct++;box=Math.min(5,box+1)}else{wrong++;box=0}const d=new Date(last+"T12:00:00");d.setDate(d.getDate()+[0,1,2,4,7,14][box]);due=d.toLocaleDateString("sv-SE")}
@@ -200,7 +210,7 @@ function rebuild(){words=baseWords.concat(customWords)}
 function pool(){let a=words.map((_,i)=>i),f=$("filter").value;if(f==="due")a=a.filter(i=>due(i)||!p(i).seen);if(f==="new")a=a.filter(i=>!p(i).seen);if(f==="weak")a=a.filter(i=>p(i).wrong>p(i).correct||p(i).box<=1);return a.length?a:words.map((_,i)=>i)}
 function next(){if(!words.length)return;let a=pool().filter(i=>i!==current);if(!a.length)a=pool();current=a[Math.floor(Math.random()*a.length)];revealed=false;let dir=$("direction").value==="random"?(Math.random()<.5?"tr-de":"de-tr"): $("direction").value;currentDirection=dir;$("prompt").textContent=dir==="tr-de"?words[current].tr:words[current].de;$("answer").textContent="";$("reveal").classList.remove("hide");$("rate").classList.add("hide");$("directionLabel").textContent=$("direction").value==="random"?"Zufällig gemischt":dir==="tr-de"?"Türkisch → Deutsch":"Deutsch → Türkisch";$("session").textContent=session+" Karten in dieser Sitzung"}
 function show(){if(current<0)return;$("answer").textContent=currentDirection==="tr-de"?words[current].de:words[current].tr;revealed=true;$("reveal").classList.add("hide");$("rate").classList.remove("hide")}
-function rate(ok){if(!revealed||current<0)return;let x=p(current);x.seen++;x.last=today();if(ok){x.correct++;x.box=Math.min(5,x.box+1);x.due=plus([0,1,2,4,7,14][x.box])}else{x.wrong++;x.box=0;x.due=today()}progress[current]=x;events.push({id:crypto.randomUUID(),at:new Date().toISOString(),date:today(),ok:!!ok,index:current});save();session++;render();next()}
+function rate(ok){if(!revealed||current<0)return;let x=p(current);x.seen++;x.last=today();if(ok){x.correct++;x.box=Math.min(5,x.box+1);x.due=plus([0,1,2,4,7,14][x.box])}else{x.wrong++;x.box=0;x.due=today()}progress[words[current].id]=x;events.push({id:crypto.randomUUID(),at:new Date().toISOString(),date:today(),ok:!!ok,wordId:words[current].id});save();session++;render();next()}
 function streak(){let days=new Set(events.map(e=>e.date)),n=0,d=new Date();if(!days.has(today()))d.setDate(d.getDate()-1);while(days.has(d.toLocaleDateString("sv-SE"))){n++;d.setDate(d.getDate()-1)}return n}
 function render(){let vals=words.map((_,i)=>p(i)),known=vals.filter(x=>x.box>=5).length,correct=vals.reduce((a,x)=>a+x.correct,0),wrong=vals.reduce((a,x)=>a+x.wrong,0),reviews=correct+wrong,t=events.filter(e=>e.date===today()).length,dueCount=words.filter((_,i)=>due(i)).length;$("total").textContent=words.length.toLocaleString("de-DE");$("today").textContent=t;$("due").textContent=dueCount;$("streak").textContent=streak()+" Tage";$("homeSummary").textContent=known+" von "+words.length+" Wörtern sind sicher gelernt · "+reviews+" Bewertungen insgesamt.";$("reviews").textContent=reviews;$("correct").textContent=correct;$("accuracy").textContent=(reviews?Math.round(correct/reviews*100):0)+"%";$("mastery").textContent=(words.length?Math.round(known/words.length*100):0)+"%";$("goalProgress").textContent=t+" von 20 Karten heute geschafft.";renderStages(vals);renderWeek();renderHardest();renderWords()}
 function renderStages(vals){let labels=["Neu","Stufe 1","Stufe 2","Stufe 3","Stufe 4","Sicher"];let nums=[0,1,2,3,4,5].map(b=>vals.filter(x=>x.box===b).length),max=Math.max(1,...nums);$("stages").innerHTML=nums.map((n,i)=>'<div class="barrow"><span>'+labels[i]+'</span><div class="bar"><i style="width:'+(n/max*100)+'%"></i></div><b>'+n+'</b></div>').join("")}
@@ -211,12 +221,12 @@ function renderWords(){if(!words.length)return;let q=$("search").value.toLocaleL
 function endSession(){lastSession=session;current=-1;revealed=false;tab("home");render();$("homeSummary").textContent+=" · Letzte Sitzung: "+lastSession+" Karten."}
 function tab(name){["home","learn","words","add","stats"].forEach(x=>$(x).classList.toggle("hide",x!==name));document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b.dataset.tab===name));if(name==="words")renderWords();if(name==="stats")render()}
 document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>tab(b.dataset.tab));$("start").onclick=()=>{session=0;tab("learn");next()};$("next").onclick=next;$("endSession").onclick=endSession;$("show").onclick=show;$("right").onclick=()=>rate(true);$("again").onclick=()=>rate(false);$("direction").value=localStorage.getItem(DIRECTION_KEY)||"tr-de";$("direction").onchange=()=>{localStorage.setItem(DIRECTION_KEY,$("direction").value);queueSync();next()};$("filter").onchange=next;$("search").oninput=renderWords;$("wordFilter").onchange=renderWords;
-$("addForm").onsubmit=e=>{e.preventDefault();let tr=$("newTr").value.trim(),de=$("newDe").value.trim();if(!tr||!de)return;if(words.some(w=>w.tr.toLocaleLowerCase()===tr.toLocaleLowerCase()&&w.de.toLocaleLowerCase()===de.toLocaleLowerCase())){$("addMessage").textContent="Dieses Wortpaar gibt es bereits.";$("addMessage").className="small danger";return}customWords.push({tr,de});rebuild();save();render();$("addForm").reset();$("addMessage").textContent="Gespeichert! Das Wort ist jetzt in deiner Wortliste.";$("addMessage").className="small success"};
-$("export").onclick=()=>{let a=document.createElement("a"),u=URL.createObjectURL(new Blob([JSON.stringify({version:2,progress,customWords,events},null,2)],{type:"application/json"}));a.href=u;a.download="tuerkisch-lernstand.json";a.click();URL.revokeObjectURL(u)};$("import").onclick=()=>$("file").click();$("file").onchange=e=>{let file=e.target.files[0];if(!file)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);progress=d.progress||{};customWords=d.customWords||[];events=d.events||[];rebuild();save();render();alert("Sicherung geladen.")}catch{alert("Ungültige Sicherungsdatei.")}};r.readAsText(file)};
+$("addForm").onsubmit=e=>{e.preventDefault();let tr=$("newTr").value.trim(),de=$("newDe").value.trim();if(!tr||!de)return;if(words.some(w=>w.tr.toLocaleLowerCase()===tr.toLocaleLowerCase()&&w.de.toLocaleLowerCase()===de.toLocaleLowerCase())){$("addMessage").textContent="Dieses Wortpaar gibt es bereits.";$("addMessage").className="small danger";return}customWords.push({tr,de,id:customId({tr,de})});rebuild();save();render();$("addForm").reset();$("addMessage").textContent="Gespeichert! Das Wort ist jetzt in deiner Wortliste.";$("addMessage").className="small success"};
+$("export").onclick=()=>{let a=document.createElement("a"),u=URL.createObjectURL(new Blob([JSON.stringify(snapshot(),null,2)],{type:"application/json"}));a.href=u;a.download="tuerkisch-lernstand.json";a.click();URL.revokeObjectURL(u)};$("import").onclick=()=>$("file").click();$("file").onchange=e=>{let file=e.target.files[0];if(!file)return;let r=new FileReader();r.onload=()=>{try{let d=migrate(JSON.parse(r.result));progress=d.progress;customWords=d.customWords;events=d.events;rebuild();save();render();alert("Sicherung geladen.")}catch{alert("Ungültige Sicherungsdatei.")}};r.readAsText(file)};
 async function load(){
  try{
   let loaded=false,errors=[];
-  for(const path of ["data/vokabeln.json"]){
+  for(const path of ["data/vokabeln-v3.json"]){
    try{
     const response=await fetch(path+"?v=20261127-reset",{cache:"no-store"});
     if(!response.ok){errors.push(path+": HTTP "+response.status);continue}
@@ -224,7 +234,7 @@ async function load(){
     const parsed=JSON.parse(text);
     if(!Array.isArray(parsed)||!parsed.length)throw Error("Datei enthält keine Vokabelliste");
     if(!parsed.every(w=>w&&typeof w.tr==="string"&&typeof w.de==="string"))throw Error("Einträge haben nicht das erwartete Format");
-    baseWords=parsed;loaded=true;break;
+    if(new Set(parsed.map(w=>w.id)).size!==parsed.length||parsed.some(w=>!w.id))throw Error("Ungültige Vokabel-IDs");baseWords=parsed;loaded=true;break;
    }catch(err){errors.push(path+": "+err.message)}
   }
   if(!loaded)throw Error("Keine Vokabelliste erreichbar. "+errors.join(" | "));
@@ -232,7 +242,7 @@ async function load(){
   progress=JSON.parse(localStorage.getItem(PROGRESS_KEY)||"{}");
   customWords=JSON.parse(localStorage.getItem(CUSTOM_KEY)||"[]");
   events=JSON.parse(localStorage.getItem(EVENT_KEY)||"[]");
-  rebuild();render();next();await initSync();
+  const old=await fetch("data/vokabeln.json");if(!old.ok)throw Error("Migrationsliste fehlt");legacyBase=(await old.json()).map((w,i)=>({...w,id:"tr-"+String(i+1).padStart(4,"0")}));const migrated=migrate({progress,customWords,events});progress=migrated.progress;customWords=migrated.customWords;events=migrated.events;saveLocal();rebuild();render();next();await initSync();
   let incomplete=baseWords.filter(w=>!w.tr||!w.de).length;
   if(incomplete){$("dataWarning").textContent=incomplete+" Eintrag(e) sind unvollständig.";$("dataWarning").classList.remove("hide")}
  }catch(e){
@@ -242,4 +252,5 @@ async function load(){
  } 
 }
 load();
+if("serviceWorker" in navigator)navigator.serviceWorker.register("./sw.js").catch(console.warn);
 </script></body></html>
