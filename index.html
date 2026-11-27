@@ -125,35 +125,80 @@ async function readRemote(){
  if(!d.progress||!Array.isArray(d.customWords)||!Array.isArray(d.events))throw Error("Ungültiger Online-Lernstand");
  syncSha=j.sha;return d;
 }
-async function initSync(){
- syncReady=false;
- try{const d=await readRemote();
- if(d){const local=snapshot();const hasLocal=Object.keys(progress).length||events.length||customWords.length;
- const same=JSON.stringify(local.progress)===JSON.stringify(d.progress)&&JSON.stringify(local.events)===JSON.stringify(d.events)&&JSON.stringify(local.customWords)===JSON.stringify(d.customWords);
- if(hasLocal&&!same){if(!confirm("Lokaler und Online-Lernstand unterscheiden sich. OK: Online-Lernstand laden. Abbrechen: lokalen Stand behalten (keine automatische Überschreibung).")){syncStatus("Synchronisierung pausiert: unterschiedliche Lernstände. Exportiere den lokalen Stand vor einem erneuten Versuch.");return}}
- progress=d.progress;customWords=d.customWords;events=d.events;if(["tr-de","de-tr","random"].includes(d.direction)){$("direction").value=d.direction;localStorage.setItem(DIRECTION_KEY,d.direction)}saveLocal();rebuild();render();next();}
- syncReady=true;syncStatus(syncToken?"GitHub verbunden.":"Online-Lernstand geladen bzw. geprüft. Zum automatischen Speichern GitHub verbinden.");
- if(!d&&syncToken)queueSync();
- }catch(e){syncStatus("Online-Lernstand konnte nicht geprüft werden: "+e.message)}
+
+// Merge reviews by unique event ID; older reviews use occurrence-aware IDs.
+function mergeStates(remote){
+ const local=snapshot(), oldWord=words[current];
+ const key=w=>JSON.stringify([w.tr.trim().toLocaleLowerCase("tr"),w.de.trim().toLocaleLowerCase("de")]);
+ const combined=[], lookup=new Map(baseWords.map((w,i)=>[key(w),i]));
+ for(const w of [...remote.customWords,...local.customWords])if(!lookup.has(key(w))){lookup.set(key(w),baseWords.length+combined.length);combined.push(w)}
+ const merged={}, all=new Map();
+ for(const state of [remote,local]){
+  const source=baseWords.concat(state.customWords), counts=new Map();
+  const mapIndex=i=>source[i]?lookup.get(key(source[i])):undefined;
+  for(const [i,p] of Object.entries(state.progress)){
+   const j=mapIndex(i);if(j===undefined)continue;
+   const prev=merged[j];if(!prev)merged[j]={...p};else{
+    const latest=(p.last||"")>(prev.last||"")?p:prev;
+    merged[j]={...latest,correct:Math.max(prev.correct||0,p.correct||0),wrong:Math.max(prev.wrong||0,p.wrong||0),seen:Math.max(prev.seen||0,p.seen||0)};
+   }
+  }
+  for(const e of state.events){
+   const j=mapIndex(e.index);if(j===undefined)continue;
+   const sig=JSON.stringify([key(source[e.index]),e.date,!!e.ok]);
+   const n=(counts.get(sig)||0)+1;counts.set(sig,n);
+   const id=e.id||"legacy:"+sig+":"+n;
+   if(!all.has(id))all.set(id,{...e,id,index:j});
+  }
+ }
+ const combinedEvents=[...all.values()].sort((a,b)=>(a.at||a.date).localeCompare(b.at||b.date)||a.id.localeCompare(b.id));
+ const byIndex=new Map();
+ for(const e of combinedEvents){if(!byIndex.has(e.index))byIndex.set(e.index,[]);byIndex.get(e.index).push(e)}
+ for(const [i,es] of byIndex){
+  let box=0,correct=0,wrong=0,last="",due="";
+  for(const e of es){last=e.date;if(e.ok){correct++;box=Math.min(5,box+1)}else{wrong++;box=0}const d=new Date(last+"T12:00:00");d.setDate(d.getDate()+[0,1,2,4,7,14][box]);due=d.toLocaleDateString("sv-SE")}
+  const p=merged[i]||{};
+  if(correct>=(p.correct||0)&&wrong>=(p.wrong||0))merged[i]={...p,box,correct,wrong,seen:correct+wrong,last,due};
+  else merged[i]={...p,correct:Math.max(correct,p.correct||0),wrong:Math.max(wrong,p.wrong||0),seen:Math.max(es.length,p.seen||0)};
+ }
+ progress=merged;customWords=combined;events=combinedEvents;rebuild();
+ if(oldWord)current=lookup.get(key(oldWord))??-1;
+ saveLocal();render();if(current<0)next();
 }
-function queueSync(){syncDirty=true;if(!syncReady||!syncToken){syncStatus("Nur lokal gespeichert – GitHub verbinden bzw. Synchronisierung erneut prüfen.");return}clearTimeout(syncTimer);syncTimer=setTimeout(writeRemote,400)}
+function stateSignature(s){return JSON.stringify([s.progress,s.customWords,s.events])}
+async function initSync(){await writeRemote()}
+function queueSync(){syncDirty=true;syncStatus(syncToken?"Lokal gespeichert – synchronisiere …":"Lokal gespeichert – GitHub verbinden zum geräteübergreifenden Speichern.");clearTimeout(syncTimer);syncTimer=setTimeout(writeRemote,500)}
 async function writeRemote(){
- if(syncBusy||!syncReady||!syncToken||!syncDirty)return;
- syncBusy=true;syncDirty=false;syncStatus("Speichere auf GitHub …");
- try{const body={message:"Lernstand aktualisieren",content:encode(JSON.stringify(snapshot())),...(syncSha?{sha:syncSha}:{})};
- const r=await fetch(syncUrl,{method:"PUT",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
- if(!r.ok)throw Error("HTTP "+r.status+" – Berechtigung oder zwischenzeitliche Änderung prüfen");
- const j=await r.json();syncSha=j.content.sha;syncStatus("Auf GitHub gespeichert: "+new Date().toLocaleTimeString("de-DE"));
- }catch(e){syncDirty=true;syncReady=false;syncStatus("Nicht online gespeichert: "+e.message+" – lokaler Stand bleibt erhalten.")}
- finally{syncBusy=false;if(syncDirty&&syncReady)queueSync()}
+ if(syncBusy)return;
+ syncBusy=true;syncDirty=false;syncStatus("Online-Lernstand wird abgeglichen …");
+ try{
+  for(let attempt=0;attempt<4;attempt++){
+   const remote=await readRemote();
+   if(remote)mergeStates(remote);
+   syncReady=true;
+   if(!syncToken){syncStatus("Online-Stand geladen – zum Speichern GitHub verbinden.");return}
+   const snap=snapshot();
+   if(remote&&stateSignature(remote)===stateSignature(snap)){syncStatus("Synchronisiert · "+new Date().toLocaleTimeString("de-DE"));return}
+   const body={message:"Lernstand synchronisieren",content:encode(JSON.stringify(snap)),...(syncSha?{sha:syncSha}:{})};
+   const r=await fetch(syncUrl,{method:"PUT",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
+   if(r.status===409||r.status===422){continue}
+   if(!r.ok)throw Error("HTTP "+r.status);
+   const j=await r.json();syncSha=j.content.sha;syncStatus("Synchronisiert · "+new Date().toLocaleTimeString("de-DE"));return;
+  }
+  throw Error("Gleichzeitige Änderung – erneuter Versuch erforderlich");
+ }catch(e){syncStatus("Offline / nicht synchronisiert: "+e.message+" – lokal gespeichert.");}
+ finally{syncBusy=false;if(syncDirty)queueSync()}
 }
-$("syncConnect").onclick=async()=>{const t=prompt("GitHub Fine-grained Personal Access Token (nur dieses Repository, Contents: Read and write). Der Schlüssel bleibt in dieser Browsersitzung.");if(!t)return;syncToken=t.trim();sessionStorage.setItem("tr-github-token",syncToken);await initSync();if(syncReady&&syncDirty)queueSync()};
-$("syncRetry").onclick=async()=>{if(!syncReady)await initSync();if(syncReady&&syncToken){syncDirty=true;await writeRemote()}};
+$("syncConnect").onclick=async()=>{const t=prompt("GitHub Personal Access Token (nur dieses Repository, Contents: Read and write).");if(!t)return;syncToken=t.trim();sessionStorage.setItem("tr-github-token",syncToken);await initSync()};
+$("syncRetry").onclick=()=>writeRemote();
+window.addEventListener("online",()=>writeRemote());
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&baseWords.length)writeRemote()});
+setInterval(()=>{if(!document.hidden&&baseWords.length)writeRemote()},30000);
 function rebuild(){words=baseWords.concat(customWords)}
 function pool(){let a=words.map((_,i)=>i),f=$("filter").value;if(f==="due")a=a.filter(i=>due(i)||!p(i).seen);if(f==="new")a=a.filter(i=>!p(i).seen);if(f==="weak")a=a.filter(i=>p(i).wrong>p(i).correct||p(i).box<=1);return a.length?a:words.map((_,i)=>i)}
 function next(){if(!words.length)return;let a=pool().filter(i=>i!==current);if(!a.length)a=pool();current=a[Math.floor(Math.random()*a.length)];revealed=false;let dir=$("direction").value==="random"?(Math.random()<.5?"tr-de":"de-tr"): $("direction").value;currentDirection=dir;$("prompt").textContent=dir==="tr-de"?words[current].tr:words[current].de;$("answer").textContent="";$("reveal").classList.remove("hide");$("rate").classList.add("hide");$("directionLabel").textContent=$("direction").value==="random"?"Zufällig gemischt":dir==="tr-de"?"Türkisch → Deutsch":"Deutsch → Türkisch";$("session").textContent=session+" Karten in dieser Sitzung"}
 function show(){if(current<0)return;$("answer").textContent=currentDirection==="tr-de"?words[current].de:words[current].tr;revealed=true;$("reveal").classList.add("hide");$("rate").classList.remove("hide")}
-function rate(ok){if(!revealed||current<0)return;let x=p(current);x.seen++;x.last=today();if(ok){x.correct++;x.box=Math.min(5,x.box+1);x.due=plus([0,1,2,4,7,14][x.box])}else{x.wrong++;x.box=0;x.due=today()}progress[current]=x;events.push({date:today(),ok:!!ok,index:current});save();session++;render();next()}
+function rate(ok){if(!revealed||current<0)return;let x=p(current);x.seen++;x.last=today();if(ok){x.correct++;x.box=Math.min(5,x.box+1);x.due=plus([0,1,2,4,7,14][x.box])}else{x.wrong++;x.box=0;x.due=today()}progress[current]=x;events.push({id:crypto.randomUUID(),at:new Date().toISOString(),date:today(),ok:!!ok,index:current});save();session++;render();next()}
 function streak(){let days=new Set(events.map(e=>e.date)),n=0,d=new Date();if(!days.has(today()))d.setDate(d.getDate()-1);while(days.has(d.toLocaleDateString("sv-SE"))){n++;d.setDate(d.getDate()-1)}return n}
 function render(){let vals=words.map((_,i)=>p(i)),known=vals.filter(x=>x.box>=5).length,correct=vals.reduce((a,x)=>a+x.correct,0),wrong=vals.reduce((a,x)=>a+x.wrong,0),reviews=correct+wrong,t=events.filter(e=>e.date===today()).length,dueCount=words.filter((_,i)=>due(i)).length;$("total").textContent=words.length.toLocaleString("de-DE");$("today").textContent=t;$("due").textContent=dueCount;$("streak").textContent=streak()+" Tage";$("homeSummary").textContent=known+" von "+words.length+" Wörtern sind sicher gelernt · "+reviews+" Bewertungen insgesamt.";$("reviews").textContent=reviews;$("correct").textContent=correct;$("accuracy").textContent=(reviews?Math.round(correct/reviews*100):0)+"%";$("mastery").textContent=(words.length?Math.round(known/words.length*100):0)+"%";$("goalProgress").textContent=t+" von 20 Karten heute geschafft.";renderStages(vals);renderWeek();renderHardest();renderWords()}
 function renderStages(vals){let labels=["Neu","Stufe 1","Stufe 2","Stufe 3","Stufe 4","Sicher"];let nums=[0,1,2,3,4,5].map(b=>vals.filter(x=>x.box===b).length),max=Math.max(1,...nums);$("stages").innerHTML=nums.map((n,i)=>'<div class="barrow"><span>'+labels[i]+'</span><div class="bar"><i style="width:'+(n/max*100)+'%"></i></div><b>'+n+'</b></div>').join("")}
