@@ -1,1 +1,1 @@
-{"name":"Türkisch lernen","short_name":"Türkisch","start_url":"./","display":"standalone","background_color":"#f4f7f4","theme_color":"#173b35","lang":"de"}
+{"id":"./","name":"Türkisch-Vokabeltrainer","short_name":"Türkisch","start_url":"./","scope":"./","display":"standalone","background_color":"#f4f4f2","theme_color":"#991b25","lang":"de","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
