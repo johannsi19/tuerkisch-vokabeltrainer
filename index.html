@@ -73,7 +73,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid #c64b4540;border-color
 <div class="hero-copy"><div class="eyebrow">Türkçe · Deutsch · Persönlicher Lernbereich</div><h1>Türkisch<br>Vokabeltrainer</h1><p>Ne mutlu Türküm diyene!</p><div class="hero-sign">Mustafa Kemal Atatürk</div></div>
 <div class="flag-mark" aria-hidden="true">☾<br><span style="font-size:48px">★</span></div>
 </div></header>
-<main><div class="panel"><div class="row"><strong class="grow">GitHub-Lernstand</strong><button class="btn" id="syncConnect">GitHub verbinden</button><button class="btn" id="syncRetry">Jetzt synchronisieren</button></div><p id="syncStatus" class="small" role="status">Online-Lernstand wird geprüft …</p></div>
+<main><div class="panel"><div class="row"><strong class="grow">Cloud-Lernstand</strong><button class="btn" id="syncConnect">Anmelden</button><button class="btn" id="syncRetry">Jetzt synchronisieren</button></div><div id="cloudLogin" class="row"><input id="cloudEmail" type="email" placeholder="E-Mail" autocomplete="email"><input id="cloudPassword" type="password" placeholder="Passwort" autocomplete="current-password"><button class="btn" id="cloudRegister">Konto erstellen</button></div><p id="syncStatus" class="small" role="status">Online-Lernstand wird geprüft …</p></div>
 <nav class="nav"><button data-tab="home" class="active">Übersicht</button><button data-tab="learn">Lernen</button><button data-tab="words">Wortliste</button><button data-tab="add">+ Wort hinzufügen</button><button data-tab="stats">Statistiken</button><span class="spacer"></span><button id="export">Sicherung exportieren</button><button id="import">Importieren</button><input id="file" type="file" accept="application/json" hidden></nav>
 <section id="home">
 <div class="stats">
@@ -101,7 +101,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid #c64b4540;border-color
 </section>
 <p class="foot">Türkisch-Vokabeltrainer · GitHub-Synchronisierung verfügbar · Open Source</p>
 </main>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.js"></script><script>
 const $=id=>document.getElementById(id),PROGRESS_KEY="tr-vocab-progress-v1",CUSTOM_KEY="tr-vocab-custom-v1",EVENT_KEY="tr-vocab-events-v1",DIRECTION_KEY="tr-vocab-direction-v1";
 let baseWords=[],customWords=[],words=[],progress={},events=[],current=-1,revealed=false,session=0,lastSession=0,currentDirection="tr-de";
 const today=()=>new Date().toLocaleDateString("sv-SE"),plus=(n)=>{let d=new Date();d.setDate(d.getDate()+n);return d.toLocaleDateString("sv-SE")};
@@ -110,22 +110,10 @@ function due(i){return !p(i).due||p(i).due<=today()}
 function status(x){return x.box>=5?"Sicher":x.seen?"In Arbeit":"Neu"}
 function saveLocal(){localStorage.setItem(PROGRESS_KEY,JSON.stringify(progress));localStorage.setItem(CUSTOM_KEY,JSON.stringify(customWords));localStorage.setItem(EVENT_KEY,JSON.stringify(events))}
 function save(){saveLocal();queueSync()}
-const syncUrl="https://api.github.com/repos/johannsi19/tuerkisch-vokabeltrainer/contents/data/lernstand.json";
-let syncToken=sessionStorage.getItem("tr-github-token")||"",syncSha=null,syncReady=false,syncBusy=false,syncDirty=false,syncTimer;
+const cloud=window.supabase?.createClient("https://gosuithwumgzuraciqcw.supabase.co","sb_publishable_UcvpU-jBtpdiGzevBp-veA_uMNPf9OA");
+let syncBusy=false,syncDirty=false,syncTimer,cloudUser=null;
 const syncStatus=s=>$("syncStatus").textContent=s;
 function snapshot(){return {version:2,progress,customWords,events,direction:$("direction").value}}
-function encode(s){return btoa(Array.from(new TextEncoder().encode(s),b=>String.fromCharCode(b)).join(""))}
-function decode(s){return new TextDecoder().decode(Uint8Array.from(atob(s),c=>c.charCodeAt(0)))}
-function headers(){return {Accept:"application/vnd.github+json",...(syncToken?{Authorization:"Bearer "+syncToken}:{})}}
-async function readRemote(){
- const r=await fetch(syncUrl,{headers:headers(),cache:"no-store"});
- if(r.status===404){syncSha=null;return null}
- if(!r.ok)throw Error("GitHub HTTP "+r.status);
- const j=await r.json();const d=JSON.parse(decode(j.content));
- if(!d.progress||!Array.isArray(d.customWords)||!Array.isArray(d.events))throw Error("Ungültiger Online-Lernstand");
- syncSha=j.sha;return d;
-}
-
 // Merge reviews by unique event ID; older reviews use occurrence-aware IDs.
 function mergeStates(remote){
  const local=snapshot(), oldWord=words[current];
@@ -166,34 +154,48 @@ function mergeStates(remote){
  saveLocal();render();if(current<0)next();
 }
 function stateSignature(s){return JSON.stringify([s.progress,s.customWords,s.events])}
-async function initSync(){await writeRemote()}
-function queueSync(){syncDirty=true;syncStatus(syncToken?"Lokal gespeichert – synchronisiere …":"Lokal gespeichert – GitHub verbinden zum geräteübergreifenden Speichern.");clearTimeout(syncTimer);syncTimer=setTimeout(writeRemote,500)}
+async function initSync(){
+ if(!cloud){syncStatus("Cloud-Bibliothek nicht erreichbar – lokal gespeichert.");return}
+ const {data}=await cloud.auth.getSession();cloudUser=data.session?.user||null;
+ $("cloudLogin").classList.toggle("hide",!!cloudUser);$("syncConnect").textContent=cloudUser?"Abmelden":"Anmelden";
+ if(cloudUser)await writeRemote();else syncStatus("Lokal gespeichert – bitte anmelden.");
+}
+function queueSync(){syncDirty=true;clearTimeout(syncTimer);syncTimer=setTimeout(writeRemote,500)}
 async function writeRemote(){
- if(syncBusy)return;
- syncBusy=true;syncDirty=false;syncStatus("Online-Lernstand wird abgeglichen …");
+ if(syncBusy||!cloudUser||!baseWords.length)return;
+ syncBusy=true;syncDirty=false;const uid=cloudUser.id;
  try{
-  for(let attempt=0;attempt<4;attempt++){
-   const remote=await readRemote();
-   if(remote)mergeStates(remote);
-   syncReady=true;
-   if(!syncToken){syncStatus("Online-Stand geladen – zum Speichern GitHub verbinden.");return}
-   const snap=snapshot();
-   if(remote&&stateSignature(remote)===stateSignature(snap)){syncStatus("Synchronisiert · "+new Date().toLocaleTimeString("de-DE"));return}
-   const body={message:"Lernstand synchronisieren",content:encode(JSON.stringify(snap)),...(syncSha?{sha:syncSha}:{})};
-   const r=await fetch(syncUrl,{method:"PUT",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
-   if(r.status===409||r.status===422){continue}
-   if(!r.ok)throw Error("HTTP "+r.status);
-   const j=await r.json();syncSha=j.content.sha;syncStatus("Synchronisiert · "+new Date().toLocaleTimeString("de-DE"));return;
-  }
-  throw Error("Gleichzeitige Änderung – erneuter Versuch erforderlich");
- }catch(e){syncStatus("Offline / nicht synchronisiert: "+e.message+" – lokal gespeichert.");}
+ syncStatus("Synchronisiere …");
+ for(let i=0;i<4;i++){
+ const {data:row,error}=await cloud.from("learning_state").select("state,revision").eq("user_id",uid).maybeSingle();if(error)throw error;
+ if(!cloudUser||cloudUser.id!==uid)return;
+ if(row)mergeStates(row.state);
+ else {const legacy=await fetch("https://api.github.com/repos/johannsi19/tuerkisch-vokabeltrainer/contents/data/lernstand.json",{cache:"no-store"});if(!legacy.ok)throw Error("Alter Online-Stand nicht erreichbar");const j=await legacy.json();mergeStates(JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(j.content),c=>c.charCodeAt(0)))));}
+ const snap=snapshot();
+ if(row&&stateSignature(row.state)===stateSignature(snap)){syncStatus("Synchronisiert · "+new Date().toLocaleTimeString("de-DE"));return}
+ const result=row?await cloud.from("learning_state").update({state:snap,revision:row.revision+1}).eq("user_id",uid).eq("revision",row.revision).select("revision"):await cloud.from("learning_state").insert({user_id:uid,state:snap}).select("revision");
+ if(result.error){if(result.error.code==="23505")continue;throw result.error}
+ if(result.data?.length){syncStatus("Synchronisiert · "+new Date().toLocaleTimeString("de-DE"));return}
+ }throw Error("Gleichzeitige Änderung – erneuter Abgleich folgt");
+ }catch(e){syncStatus("Nicht synchronisiert – lokal gespeichert: "+e.message)}
  finally{syncBusy=false;if(syncDirty)queueSync()}
 }
-$("syncConnect").onclick=async()=>{const t=prompt("GitHub Personal Access Token (nur dieses Repository, Contents: Read and write).");if(!t)return;syncToken=t.trim();sessionStorage.setItem("tr-github-token",syncToken);await initSync()};
+async function authenticate(register){
+ if(!cloud)return;
+ const email=$("cloudEmail").value.trim(),password=$("cloudPassword").value;
+ if(!email||!password){syncStatus("Bitte E-Mail und Passwort eingeben.");return}
+ const result=register?await cloud.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}}):await cloud.auth.signInWithPassword({email,password});
+ if(result.error){syncStatus(result.error.message);return}
+ $("cloudPassword").value="";
+ if(!result.data.session){syncStatus("Bitte E-Mail bestätigen und danach anmelden.");return}
+ await initSync();
+}
+$("syncConnect").onclick=async()=>{if(cloudUser){if(syncBusy){syncStatus("Bitte laufenden Abgleich abwarten.");return}await writeRemote();await cloud.auth.signOut();await initSync()}else await authenticate(false)};
+$("cloudRegister").onclick=()=>authenticate(true);
 $("syncRetry").onclick=()=>writeRemote();
 window.addEventListener("online",()=>writeRemote());
-document.addEventListener("visibilitychange",()=>{if(!document.hidden&&baseWords.length)writeRemote()});
-setInterval(()=>{if(!document.hidden&&baseWords.length)writeRemote()},30000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)writeRemote()});
+setInterval(()=>{if(!document.hidden)writeRemote()},30000);
 function rebuild(){words=baseWords.concat(customWords)}
 function pool(){let a=words.map((_,i)=>i),f=$("filter").value;if(f==="due")a=a.filter(i=>due(i)||!p(i).seen);if(f==="new")a=a.filter(i=>!p(i).seen);if(f==="weak")a=a.filter(i=>p(i).wrong>p(i).correct||p(i).box<=1);return a.length?a:words.map((_,i)=>i)}
 function next(){if(!words.length)return;let a=pool().filter(i=>i!==current);if(!a.length)a=pool();current=a[Math.floor(Math.random()*a.length)];revealed=false;let dir=$("direction").value==="random"?(Math.random()<.5?"tr-de":"de-tr"): $("direction").value;currentDirection=dir;$("prompt").textContent=dir==="tr-de"?words[current].tr:words[current].de;$("answer").textContent="";$("reveal").classList.remove("hide");$("rate").classList.add("hide");$("directionLabel").textContent=$("direction").value==="random"?"Zufällig gemischt":dir==="tr-de"?"Türkisch → Deutsch":"Deutsch → Türkisch";$("session").textContent=session+" Karten in dieser Sitzung"}
